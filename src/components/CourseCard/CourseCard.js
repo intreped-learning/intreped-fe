@@ -4,6 +4,7 @@ import {
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 import YouTube from 'react-youtube';
+import './CourseCard.scss';
 
 const CourseCard = (props) => {
   const opts = {
@@ -15,17 +16,57 @@ const CourseCard = (props) => {
   };
 
   return (
-    <div>
+    <div className="coursecards">
       <Card>
+        <YouTube
+          videoId="BrjnccFiAfE"
+          opts={opts}
+        />
         <CardBody>
-          <YouTube
-            videoId="BrjnccFiAfE"
-            opts={opts}
-          />
           <CardTitle>Engagement Strategy</CardTitle>
           <CardSubtitle>Teach Like A Champion Technique 1</CardSubtitle>
           <CardText>No Opt Out is a useful tool to get all students to the right answer, as often as possible, even if only to repeat the correct answer.</CardText>
           <Button>Add To My List!</Button>
+          <Button>Begin Course</Button>
+        </CardBody>
+      </Card>
+      <Card>
+        <YouTube
+          videoId="BrjnccFiAfE"
+          opts={opts}
+        />
+        <CardBody>
+          <CardTitle>Engagement Strategy</CardTitle>
+          <CardSubtitle>Teach Like A Champion Technique 1</CardSubtitle>
+          <CardText>No Opt Out is a useful tool to get all students to the right answer, as often as possible, even if only to repeat the correct answer.</CardText>
+          <Button>Add To My List!</Button>
+          <Button>Begin Course</Button>
+        </CardBody>
+      </Card>
+      <Card>
+        <YouTube
+          videoId="BrjnccFiAfE"
+          opts={opts}
+        />
+        <CardBody>
+          <CardTitle>Engagement Strategy</CardTitle>
+          <CardSubtitle>Teach Like A Champion Technique 1</CardSubtitle>
+          <CardText>No Opt Out is a useful tool to get all students to the right answer, as often as possible, even if only to repeat the correct answer.</CardText>
+          <Button>Add To My List!</Button>
+          <Button>Begin Course</Button>
+        </CardBody>
+      </Card>
+      <Card>
+        <YouTube
+          videoId="BrjnccFiAfE"
+          opts={opts}
+        />
+        <CardBody>
+          <CardTitle>Engagement Strategy</CardTitle>
+          <CardSubtitle>Teach Like A Champion Technique 1</CardSubtitle>
+          <CardText>No Opt Out is a useful tool to get all students to the right answer, as often as possible, even if only to repeat the correct answer.</CardText>
+          <Button>Add To My List!</Button>
+          <Button>Begin Course</Button>
         </CardBody>
       </Card>
     </div>

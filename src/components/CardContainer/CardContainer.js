@@ -1,9 +1,12 @@
 import React from 'react';
 import CourseCard from '../CourseCard/CourseCard';
+import './CardContainer.scss';
 
 const CardContainer = () => {
   return (
-    <CourseCard />
+    <div className="card-container">
+      <CourseCard />
+    </div>
   )
 }
 
