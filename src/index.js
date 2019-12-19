@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './custom.scss';
-import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import App from './components/App/App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
