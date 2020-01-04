@@ -1,19 +1,5 @@
 import React, { useState } from 'react';
 import './NavBar.scss';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
-} from 'reactstrap';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,38 +7,19 @@ const NavBar = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">intrep<span>ed</span></NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Course Categories
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Engagement Strategies
-                </DropdownItem>
-                <DropdownItem>
-                  Classroom Management
-                </DropdownItem>
-                <DropdownItem>
-                  Culturally Responsive Teaching
-                </DropdownItem>
-                <DropdownItem>
-                  Lesson Planning
-                </DropdownItem>
-                <DropdownItem>
-                  Data
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
+    <nav className="nav-bar">
+      <h1 className="logo">intrep<span>ed</span></h1>
+      <form>
+        <label for="">Course Topics</label>
+        <select>
+          <option value="engagement">Engagement Strategies</option>
+          <option value="classroom">Classroom Management</option>
+          <option value="planning">Lesson Planning</option>
+          <option value="culture">Culturally Responsive Teaching</option>
+          <option value="data">Data-Driven Instruction</option>
+        </select>
+      </form>
+    </nav>
   )
 }
 
