@@ -8,7 +8,6 @@ const NavBar = () => {
 
   return (
     <nav className="nav-bar">
-      <h1 className="logo">intrep<span>ed</span></h1>
       <form className="search-options">
         <label htmlFor="category-select">Course Topics</label>
         <select id="category-select">
