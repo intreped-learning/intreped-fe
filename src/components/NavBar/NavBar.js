@@ -9,15 +9,16 @@ const NavBar = () => {
   return (
     <nav className="nav-bar">
       <h1 className="logo">intrep<span>ed</span></h1>
-      <form>
-        <label for="">Course Topics</label>
-        <select>
+      <form className="search-options">
+        <label for="category-select">Course Topics</label>
+        <select id="category-select">
           <option value="engagement">Engagement Strategies</option>
           <option value="classroom">Classroom Management</option>
           <option value="planning">Lesson Planning</option>
           <option value="culture">Culturally Responsive Teaching</option>
           <option value="data">Data-Driven Instruction</option>
         </select>
+        <input type="text" placeholder="Search courses"/>
       </form>
     </nav>
   )
