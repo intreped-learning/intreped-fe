@@ -2,7 +2,7 @@ import React from 'react';
 import './CourseCard.scss';
 import YouTube from 'react-youtube';
 
-const CourseCard = ({ id, category, title, description }) => {
+const CourseCard = ({ id, category, title, description, image }) => {
   const opts = {
     height: '135',
     width: '240',
@@ -13,12 +13,7 @@ const CourseCard = ({ id, category, title, description }) => {
 
   return (
     <div className="coursecard">
-      <YouTube
-        className="video-player"
-        videoId={id}
-        opts={opts}
-        // onReady={this._onReady}
-      />
+      <img src={image} alt={title} className="thumbnail"/>
       <div className="course-info">
         <h3 className="category">{category}</h3>
         <h3 className="title">{title}</h3>

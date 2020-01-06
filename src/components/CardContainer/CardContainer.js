@@ -11,6 +11,7 @@ const CardContainer = ({ courses }) => {
         category={course.courseCategory}
         title={course.snippet.title}
         description={course.snippet.description}
+        image={course.snippet.thumbnails.medium.url}
       />
     )
   })
