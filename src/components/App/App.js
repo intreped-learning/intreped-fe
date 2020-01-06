@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom'
 import './App.scss';
 import NavBar from '../NavBar/NavBar';
 import CardContainer from '../CardContainer/CardContainer'
+import CourseDetail from '../CourseDetail/CourseDetail'
 import data from '../../data/seedData'
 
 const App = () => {
@@ -28,8 +29,8 @@ const App = () => {
   return (
     <div className="App">
       <NavBar />
-      <Route exact path="/" component={CardContainer} courses={courses} />
-      <Route exact path="/courses/:id" component={CourseDetail} />
+      <Route exact path="/" render={() => <CardContainer courses={courses}/>}/>
+      <Route exact path="/courses/:id" render={() => <CourseDetail/>}/>
     </div>
   );
 }
