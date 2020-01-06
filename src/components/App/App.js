@@ -30,7 +30,7 @@ const App = () => {
     <div className="App">
       <NavBar />
       <Route exact path="/" render={() => <CardContainer courses={courses}/>}/>
-      <Route exact path="/courses/:id" render={() => <CourseDetail/>}/>
+      <Route exact path="/courses/:id" render={({ match }) => <CourseDetail id={match.params.id} />}/>
     </div>
   );
 }
