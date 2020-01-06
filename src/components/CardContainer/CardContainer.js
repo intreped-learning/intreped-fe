@@ -5,7 +5,8 @@ import './CardContainer.scss';
 const CardContainer = ({ courses }) => {
   const courseCards = courses.map(course => {
     return (
-      <CourseCard 
+      <CourseCard
+        key={course.id}
         id={course.id}
         category={course.courseCategory}
         title={course.snippet.title}
