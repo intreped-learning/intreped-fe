@@ -1,8 +1,17 @@
 .coursecard {
-  // display: flex;
-  height: 350px;
-  width: 240px;
-  margin: 20px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  height: 405px;
+  width: 242px;
+  margin: 10px;
+}
+
+.course-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 10px;
+  height: 250px;
 }
 
 .title {
@@ -10,12 +19,26 @@
   font-size: 1.2em;
 }
 
-.description, .category {
+.category {
   display: block;
   font-size: 1.0em;
+}
+
+.description {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 120px;
+  width: 100%;
+  text-overflow: ellipsis;
+  text-align: left;
+  font-size: .9em;
 }
 
 .card-buttons {
   display: flex;
   justify-content: space-around;
+  height: 30px;
+  font-size: .9em;
+  padding: 0;
 }

@@ -1,5 +1,7 @@
 .card-container {
-  display: flex;
-  height: 100%;
-  margin: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  width: 80%;
+  margin: auto;
 }
