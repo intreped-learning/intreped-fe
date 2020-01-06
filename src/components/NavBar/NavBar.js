@@ -10,7 +10,7 @@ const NavBar = () => {
     <nav className="nav-bar">
       <h1 className="logo">intrep<span>ed</span></h1>
       <form className="search-options">
-        <label for="category-select">Course Topics</label>
+        <label htmlFor="category-select">Course Topics</label>
         <select id="category-select">
           <option value="engagement">Engagement Strategies</option>
           <option value="classroom">Classroom Management</option>
