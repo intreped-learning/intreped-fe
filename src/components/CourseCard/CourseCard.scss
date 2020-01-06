@@ -1,44 +1,49 @@
 .coursecard {
   border: 1px solid gray;
-  border-radius: 2px;
-  height: 405px;
+  height: 375px;
   width: 242px;
   margin: 10px;
 }
 
+.video-player {
+  border-bottom: 1px solid gray;
+}
+
 .course-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   padding: 0 10px;
-  height: 250px;
+  height: 220px;
+  width: 100%;
 }
 
 .title {
-  display: block;
-  font-size: 1.2em;
+  display: inline-block;
+  height: 60px;
+  width: 100%;
+  font-size: 1.0em;
+  overflow: hidden;
 }
 
 .category {
-  display: block;
-  font-size: 1.0em;
+  display: inline-block;
+  font-size: .8em;
+  width: 100%;
 }
 
 .description {
-  display: block;
+  display: inline-block;
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 120px;
+  height: 60px;
   width: 100%;
   text-overflow: ellipsis;
   text-align: left;
-  font-size: .9em;
+  font-size: .8em;
 }
 
 .card-buttons {
   display: flex;
   justify-content: space-around;
   height: 30px;
-  font-size: .9em;
+  font-size: .8em;
   padding: 0;
 }
