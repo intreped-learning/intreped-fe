@@ -29,8 +29,8 @@ const App = () => {
   return (
     <div className="App">
       <NavBar />
-      <Route exact path="/" render={() => <CardContainer courses={courses}/>}/>
-      <Route exact path="/courses/:id" render={({ match }) => <CourseDetail id={match.params.id} />}/>
+      <Route exact path="/" render={() => <CardContainer courses={courses} /> } />
+      <Route exact path="/courses/:id" render={({ match }) => <CourseDetail id={match.params.id} courses={courses} /> } />
     </div>
   );
 }
