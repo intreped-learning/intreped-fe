@@ -14,6 +14,7 @@ const CourseCard = ({ id, category, title, description }) => {
   return (
     <div className="coursecard">
       <YouTube
+        className="video-player"
         videoId={id}
         opts={opts}
         // onReady={this._onReady}
