@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Route } from 'react-router-dom'
 import './App.scss';
 import NavBar from '../NavBar/NavBar';
 import CardContainer from '../CardContainer/CardContainer'
@@ -27,7 +28,8 @@ const App = () => {
   return (
     <div className="App">
       <NavBar />
-      <CardContainer courses={courses}/>
+      <Route exact path="/" component={CardContainer} courses={courses} />
+      <Route exact path="/courses/:id" component={CourseDetail} />
     </div>
   );
 }
