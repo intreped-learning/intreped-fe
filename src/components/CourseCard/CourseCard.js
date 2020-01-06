@@ -1,7 +1,8 @@
 import React from 'react';
 import './CourseCard.scss';
+import YouTube from 'react-youtube';
 
-const CourseCard = (props) => {
+const CourseCard = ({ id, category, title, description }) => {
   const opts = {
     height: '135',
     width: '240',
@@ -11,8 +12,15 @@ const CourseCard = (props) => {
   };
 
   return (
-    <div className="coursecards">
-
+    <div className="coursecard">
+      <YouTube
+        videoId={id}
+        opts={opts}
+        // onReady={this._onReady}
+      />
+      <h3 className="category">{category}</h3>
+      <h3 className="title">{title}</h3>
+      <p className="description">{description}</p>
     </div>
   );
 };
