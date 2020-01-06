@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
+import { Header } from '../Header/Header';
 import NavBar from '../NavBar/NavBar';
 import CardContainer from '../CardContainer/CardContainer'
 import data from '../../data/seedData'
@@ -26,6 +27,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <Header />
       <NavBar />
       <CardContainer courses={courses}/>
     </div>
