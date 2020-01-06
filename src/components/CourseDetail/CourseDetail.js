@@ -22,10 +22,6 @@ const CourseDetail = ({ id, courses }) => {
           <h3 className="category">{currentCourse.courseCategory}</h3>
           <h3 className="title">{currentCourse.snippet.title}</h3>
           <p className="description">{currentCourse.snippet.description}</p>
-          <div className="card-buttons">
-            <button>Add To My List</button>
-            <button>Begin Course</button>
-          </div>
         </div>
       </div>
   );
