@@ -1,8 +1,10 @@
 import React from 'react';
 import './CourseDetail.scss';
+import { useSelector } from 'react-redux';
 import YouTube from 'react-youtube';
 
-const CourseDetail = ({ id, courses }) => {
+const CourseDetail = ({ id }) => {
+  const { courses } = useSelector(state => state);
   const currentCourse = courses.find(course => course.id === parseInt(id));
   const videoId = currentCourse.url.split('?v=')[1];
   const opts = {
