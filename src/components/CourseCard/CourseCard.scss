@@ -62,7 +62,8 @@
   transition: transform .2s;
   &:hover { font-style:italic;
     transform: scale(1.2);
-    border-radius: 30px; }
+    border-radius: 30px;
+    text-decoration: none; }
 }
 
 .begin-course-btn {
@@ -71,5 +72,6 @@
   transition: transform .2s;
   &:hover { font-style:italic;
     transform: scale(1.2);
-    border-radius: 30px; }
+    border-radius: 30px;
+    text-decoration: none; }
 }
