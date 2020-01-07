@@ -42,6 +42,13 @@
   }
 }
 
-// .cancel-btn {
-
-// }
+.cancel-btn {
+  background-color: rgb(187, 47, 47);
+  color: #fff;
+  transition: transform .2s;
+  &:hover {
+    font-style: italic;
+    transform: scale(1.2);
+    border-radius: 30px;
+  }
+}
