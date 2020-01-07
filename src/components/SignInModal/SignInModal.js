@@ -1,16 +1,16 @@
 import ReactModal from 'react-modal';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './SignInModal.scss';
 
 
 const SignInModal = () => {
-  const { modal } = useSelector(state => state);
+  const { modalOpen } = useSelector(state => state);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleChange = (e) => {
-    if (e.target.name === username) {
+    if (e.target.name === 'username') {
       setUsername(e.target.value)
     } else {
       setPassword(e.target.value)
@@ -20,7 +20,7 @@ const SignInModal = () => {
   return (
     <ReactModal
       ariaHideApp={false}
-      isOpen={modal}
+      isOpen={modalOpen}
       style={{
         overlay: {
           position: "fixed",
@@ -47,7 +47,7 @@ const SignInModal = () => {
         />
         <label className='password-label' htmlFor='password'>Password:</label>
         <input
-          type='text'
+          type='password'
           name='password'
           className='password-input'
           value={password}

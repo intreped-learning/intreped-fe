@@ -6,6 +6,7 @@ import { Header } from '../Header/Header';
 import NavBar from '../NavBar/NavBar';
 import CourseDetail from '../CourseDetail/CourseDetail';
 import CardContainer from '../CardContainer/CardContainer';
+import SignInModal from '../SignInModal/SignInModal';
 import { getCourses } from '../../utils/apiCalls';
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
     <div className="App">
       <Header />
       <NavBar />
+      <SignInModal />
       <Route exact path="/" render={() => <CardContainer /> } />
       <Route exact path="/courses/:id" render={({ match }) => <CourseDetail id={match.params.id} /> } />
       {error && <h1>{error}</h1>}
