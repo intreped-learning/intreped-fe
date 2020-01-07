@@ -1,6 +1,10 @@
 import { combineReducers } from 'redux';
-// import { todos } from './todos';
+import { teacher } from './teacher';
+import { courses } from './courses';
+import { modalOpen } from './modalOpen'
 
 export const rootReducer = combineReducers({
-  // todos: todos
+  teacher,
+  courses,
+  modalOpen
 });

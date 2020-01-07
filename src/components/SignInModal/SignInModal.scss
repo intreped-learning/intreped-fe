@@ -1,0 +1,47 @@
+.login-header {
+  color: #000000;
+}
+
+.sign-in-form{
+  align-items: center;
+  background: #ffffff;
+  border: 5px solid #453B7F;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 55vh;
+  justify-content: center;
+  left: 30vw;
+  position: absolute;
+  top: 20vh;
+  width: 40vw;
+}
+
+.username-input,
+.password-input {
+  margin: 5px;
+  padding: 5px;
+  width: 80%;
+}
+
+.login-btn,
+.cancel-btn {
+    width: 75px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin: 20px;
+}
+
+.login-btn {
+  background-color: #8AE588;
+  transition: transform .2s;
+  &:hover {
+    font-style: italic;
+    transform: scale(1.2);
+    border-radius: 30px;
+  }
+}
+
+// .cancel-btn {
+
+// }
