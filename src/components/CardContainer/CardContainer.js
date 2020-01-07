@@ -10,11 +10,11 @@ const CardContainer = () => {
       return courses
     }
       else {
-      return courses.filter(course => course.category === currentCategory)
+      return courses.filter(course => course.category === currentCategory);
     }
   }
   let searchCourses = () => {
-    return determineCourses().filter(course => course.title.toLowerCase().includes(currentSearch.toLowerCase()) || course.description.toLowerCase().includes(currentSearch.toLowerCase()))
+    return determineCourses().filter(course => course.title.toLowerCase().includes(currentSearch.toLowerCase()) || course.description.toLowerCase().includes(currentSearch.toLowerCase()));
   }
 
 
