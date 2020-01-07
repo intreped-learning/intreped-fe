@@ -1,10 +1,7 @@
 export const teacher = (state = {}, action) => {
   switch (action.type) {
     case 'LOGIN':
-      return {
-        ...state,
-        teacher: action.payload
-      };
+      return action.payload;
     case 'LOGOUT':
       return {
         ...state,
