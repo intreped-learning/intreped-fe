@@ -2,13 +2,13 @@ import React from 'react';
 import './CourseCard.scss';
 import { Link } from 'react-router-dom'
 
-const CourseCard = ({ id, category, title, description, image }) => {
+const CourseCard = ({ id, category, title, description, thumbnail }) => {
   const route = `courses/${id}`
 
   return (
     <Link to={route}>
       <div className="coursecard">
-        <img src={image} alt={title} className="thumbnail"/>
+        <img src={thumbnail} alt={title} className="thumbnail"/>
         <div className="course-info">
           <h3 className="category">{category}</h3>
           <h3 className="title">{title}</h3>
