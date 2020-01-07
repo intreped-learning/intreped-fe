@@ -5,19 +5,34 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './components/App/App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import { persistStore, persistReducer } from 'redux-persist';
+import { PersistGate } from 'redux-persist/integration/react';
+import storage from 'redux-persist/lib/storage'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { rootReducer } from './reducers';
 import { BrowserRouter as Router} from 'react-router-dom';
 
 import * as serviceWorker from './serviceWorker';
 
-const store = createStore(rootReducer, composeWithDevTools());
+
+const persistConfig = {
+  key: 'root',
+  storage,
+}
+
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+const store = createStore(persistedReducer, composeWithDevTools());
+let persistor = persistStore(store)
+
 
 const router = (
   <Router>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <PersistGate loading={null} persistor={persistor}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </PersistGate>
   </Router>
 )
 
