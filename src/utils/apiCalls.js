@@ -32,3 +32,14 @@ export const addToTeacherCourses = async (courseId) => {
   const addedCourse = await res.json();
   return addedCourse;
 }
+
+export const teacherSignIn = async (username, password) => {
+  const res = await fetch(`${baseUrl}teachers/`);
+  if (!res.ok) {
+    throw Error('Unable to contact server for sign-in');
+  };
+  const teachers = await res.json();
+  const foundUser = teachers.filter(teacher => teacher.username === username);
+  const passMatch = foundUser.password === password ? foundUser : null;
+  return passMatch
+}
