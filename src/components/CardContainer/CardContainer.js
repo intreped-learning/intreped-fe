@@ -4,15 +4,17 @@ import CourseCard from '../CourseCard/CourseCard';
 import './CardContainer.scss';
 
 const CardContainer = () => {
-  const { courses, currentCategory } = useSelector(state => state);
+  const { courses, currentCategory, currentSearch } = useSelector(state => state);
   let determineCourses = () => {
-    if (currentCategory === "All Categories") {
+    if (currentCategory === "All Categories" && currentSearch === '') {
       return courses
-    } else {
+    } else if (currentSearch !== '') {
+        return courses.filter(course => course.title.toLowerCase().includes(currentSearch.toLowerCase()) || course.description.toLowerCase().includes(currentSearch.toLowerCase()))
+    }
+      else {
       return courses.filter(course => course.category === currentCategory)
     }
   }
-    
 
   const courseCards = determineCourses().map(course => {
     return (
