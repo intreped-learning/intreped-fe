@@ -8,10 +8,9 @@ const CardContainer = ({ courses }) => {
       <CourseCard
         key={course.id}
         id={course.id}
-        category={course.courseCategory}
-        title={course.snippet.title}
-        description={course.snippet.description}
-        image={course.snippet.thumbnails.medium.url}
+        category={course.category}
+        title={course.title}
+        description={course.description}
       />
     )
   })
