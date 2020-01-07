@@ -9,7 +9,6 @@ import CardContainer from '../CardContainer/CardContainer';
 import { getCourses } from '../../utils/apiCalls';
 
 const App = () => {
-  // const [courses, setCourses] = useState([]);
   const dispatch = useDispatch()
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
