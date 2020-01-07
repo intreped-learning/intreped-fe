@@ -9,7 +9,7 @@ const NavBar = () => {
   return (
     <nav className="nav-bar">
       <form className="search-options">
-        <label htmlFor="category-select">Course Topics</label>
+        <label htmlFor="category-select" id="categories">Course Categories</label>
         <select id="category-select">
           <option value="engagement">Engagement Strategies</option>
           <option value="classroom">Classroom Management</option>
