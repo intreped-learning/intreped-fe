@@ -4,8 +4,17 @@ import CourseCard from '../CourseCard/CourseCard';
 import './CardContainer.scss';
 
 const CardContainer = () => {
-  const { courses } = useSelector(state => state);
-  const courseCards = courses.map(course => {
+  const { courses, currentCategory } = useSelector(state => state);
+  let determineCourses = () => {
+    if (currentCategory === "all") {
+      return courses
+    } else {
+      return courses.filter(course => course.category === currentCategory)
+    }
+  }
+    
+
+  const courseCards = determineCourses().map(course => {
     return (
       <CourseCard
         key={course.id}
