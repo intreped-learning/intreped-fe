@@ -1,13 +1,16 @@
 import ReactModal from 'react-modal';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { teacherSignIn } from '../../utils/apiCalls';
 import './SignInModal.scss';
 
 
 const SignInModal = () => {
   const { modalOpen } = useSelector(state => state);
+  const dispatch = useDispatch();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('')
 
   const handleChange = (e) => {
     if (e.target.name === 'username') {
@@ -15,6 +18,24 @@ const SignInModal = () => {
     } else {
       setPassword(e.target.value)
     }
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const status = await teacherSignIn(username, password);
+    if (!status.length) {
+      setError('Username and/or Password Incorrect');
+    } else {
+      dispatch({
+        type: 'LOGIN',
+        payload: status[0]
+      });
+      dispatch({
+        type: 'TOGGLE_MODAL'
+      })
+    }
+    setUsername('');
+    setPassword('')
   }
 
   return (
@@ -53,6 +74,10 @@ const SignInModal = () => {
           value={password}
           onChange={handleChange}
         />
+        <button
+          className='login-btn'
+          onClick={handleSubmit}
+        >Login</button>
       </form>
     </ReactModal>
   )

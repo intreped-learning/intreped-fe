@@ -10,7 +10,7 @@ import SignInModal from '../SignInModal/SignInModal';
 import { getCourses } from '../../utils/apiCalls';
 
 const App = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 

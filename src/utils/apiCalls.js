@@ -40,6 +40,6 @@ export const teacherSignIn = async (username, password) => {
   };
   const teachers = await res.json();
   const foundUser = teachers.filter(teacher => teacher.username === username);
-  const passMatch = foundUser.password === password ? foundUser : null;
+  const passMatch = foundUser[0].password === password ? foundUser : null;
   return passMatch
 }
