@@ -1,22 +1,23 @@
 .nav-bar {
-  align-items: center;
-  background-color: rgb(60, 83, 211);
+  background-color:#2B3551;
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
+  width: 100vw;
 }
 
 .search-options {
+  align-items: center;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
   width: 50%;
 }
 
 .label {
   margin: 0;
 }
+
+#categories {
+  color: #fff;
+}
+
