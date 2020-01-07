@@ -21,7 +21,7 @@ const CourseDetail = ({ id, courses }) => {
         opts={opts}
       />
         <div className="course-info">
-          <h3 className="category">{currentCourse.courseCategory}</h3>
+          <h3 className="category">{currentCourse.category}</h3>
           <h3 className="title">{currentCourse.title}</h3>
           <p className="description">{currentCourse.description}</p>
         </div>
