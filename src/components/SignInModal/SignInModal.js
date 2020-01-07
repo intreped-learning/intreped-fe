@@ -38,6 +38,13 @@ const SignInModal = () => {
     setPassword('')
   }
 
+  const handleClose = (e) => {
+    e.preventDefault();
+    dispatch({
+      type: 'TOGGLE_MODAL'
+    })
+  }
+
   return (
     <ReactModal
       ariaHideApp={false}
@@ -58,7 +65,7 @@ const SignInModal = () => {
       overlayClassName="SignInFormOverlay"
     >
       <form className="sign-in-form">
-        <h2 className='login-header'>Log-In</h2>
+        <h2 className='login-header'>IntrepED Sign In</h2>
         <label className='username-label' htmlFor='username'>Username:</label>
         <input
           type='text'
@@ -75,10 +82,16 @@ const SignInModal = () => {
           value={password}
           onChange={handleChange}
         />
-        <button
-          className='login-btn'
-          onClick={handleSubmit}
-        >Login</button>
+        <section className='buttons'>
+          <button
+            className='login-btn'
+            onClick={handleSubmit}
+          >Login</button>
+          <button
+            className='cancel-btn'
+            onClick={handleClose}
+          >Cancel</button>
+        </section>
       </form>
     </ReactModal>
   )
