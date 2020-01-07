@@ -2,28 +2,35 @@ import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom'
 import './App.scss';
 import NavBar from '../NavBar/NavBar';
-import CardContainer from '../CardContainer/CardContainer';
-import { getCourses } from '../../utils/apiCalls';
+import CardContainer from '../CardContainer/CardContainer'
+import CourseDetail from '../CourseDetail/CourseDetail'
+import data from '../../data/seedData'
 
 const App = () => {
-  const [courses, setCourses] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [courses, setCourses] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
 
-  useEffect(() => {
+  const getCourses = async () => {
     setError('')
     setIsLoading(true)
-    getCourses()
-      .then(courses => setCourses(courses))
-      .catch(error => setError(error))
+    try {
+      setCourses(data)
+    } catch(error) {
+      setError(error.message)
+    }
     setIsLoading(false)
-  })
+  }
+
+  useEffect(() => {
+    getCourses()
+  }, [])
 
   return (
     <div className="App">
       <NavBar />
-      <CardContainer courses={courses} />
-      {error && <h1>{error}</h1>}
+      <Route exact path="/" render={() => <CardContainer courses={courses} /> } />
+      <Route exact path="/courses/:id" render={({ match }) => <CourseDetail id={match.params.id} courses={courses} /> } />
     </div>
   );
 }
