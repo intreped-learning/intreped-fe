@@ -1,8 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import CourseCard from '../CourseCard/CourseCard';
 import './CardContainer.scss';
 
-const CardContainer = ({ courses }) => {
+const CardContainer = () => {
+  const { courses } = useSelector(state => state);
+  console.log(courses)
   const courseCards = courses.map(course => {
     return (
       <CourseCard
