@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Route } from 'react-router-dom'
 import './App.scss';
 import { Header } from '../Header/Header';
@@ -10,6 +10,8 @@ import SignInModal from '../SignInModal/SignInModal';
 import { getCourses } from '../../utils/apiCalls';
 
 const App = () => {
+  const { courses } = useSelector(state => state);
+
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -19,10 +21,14 @@ const App = () => {
     setError('')
     setIsLoading(true)
     getCourses()
-      .then(courses => dispatch({
-        type: 'ADD_COURSE',
-        payload: courses
-      }))
+      .then(fetchedCourses => { 
+        if (courses.length === 0) {
+          return dispatch({
+            type: 'ADD_COURSE',
+            payload: fetchedCourses
+          })
+        }
+      })
       .catch(error => setError(error))
     setIsLoading(false)
   }, [])
