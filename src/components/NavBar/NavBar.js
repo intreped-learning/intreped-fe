@@ -13,7 +13,13 @@ const NavBar = () => {
       type: 'CHANGE_CATEGORY',
       payload: e.target.value
     })
-    
+  }
+
+  const handleChangeInput = (e) => {
+    dispatch({
+      type: 'SEARCH_COURSES',
+      payload: e.target.value
+    })
   }
 
   return (
@@ -27,7 +33,7 @@ const NavBar = () => {
           <option value="Culturally Responsive Teaching">Culturally Responsive Teaching</option>
           <option value="Data-Driven Instruction">Data-Driven Instruction</option>
         </select>
-        <input type="text" placeholder="Search courses"/>
+        <input type="text" placeholder="Search courses" onChange={handleChangeInput}/>
       </form>
     </nav>
   )
