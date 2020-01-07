@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom'
 import './App.scss';
 import NavBar from '../NavBar/NavBar';
-import CardContainer from '../CardContainer/CardContainer'
-import CourseDetail from '../CourseDetail/CourseDetail'
+import CourseDetail from '../CourseDetail/CourseDetail';
+import CardContainer from '../CardContainer/CardContainer';
 import { getCourses } from '../../utils/apiCalls';
 
 const App = () => {
@@ -18,13 +18,13 @@ const App = () => {
       .then(courses => setCourses(courses))
       .catch(error => setError(error))
     setIsLoading(false)
-  })
+  }, [])
 
   return (
     <div className="App">
       <NavBar />
       <Route exact path="/" render={() => <CardContainer courses={courses} /> } />
-      <Route exact path="/courses/:id" render={({ match }) => <CourseDetail id={match.params.id} courses={courses} />} />
+      <Route exact path="/courses/:id" render={({ match }) => <CourseDetail id={match.params.id} courses={courses} /> } />
       {error && <h1>{error}</h1>}
     </div>
   );

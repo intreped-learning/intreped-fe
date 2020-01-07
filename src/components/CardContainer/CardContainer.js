@@ -11,7 +11,7 @@ const CardContainer = ({ courses }) => {
         category={course.category}
         title={course.title}
         description={course.description}
-        image={course.thumbnail}
+        thumbnail = {course.thumbnail}
       />
     )
   })

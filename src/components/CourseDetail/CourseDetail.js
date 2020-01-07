@@ -3,9 +3,8 @@ import './CourseDetail.scss';
 import YouTube from 'react-youtube';
 
 const CourseDetail = ({ id, courses }) => {
-  const currentCourse = courses.find(course => {
-    return course.id === parseInt(id)
-  });
+  const currentCourse = courses.find(course => course.id === parseInt(id));
+  const videoId = currentCourse.url.split('?v=')[1];
   const opts = {
     height: '390',
     width: '640',
@@ -15,9 +14,10 @@ const CourseDetail = ({ id, courses }) => {
   };
 
   return (
+    
     <div className="course-detail">
       <YouTube
-        videoId={id}
+        videoId={videoId}
         opts={opts}
       />
         <div className="course-info">
