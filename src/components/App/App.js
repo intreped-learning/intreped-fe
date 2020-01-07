@@ -8,6 +8,7 @@ import CourseDetail from '../CourseDetail/CourseDetail';
 import CardContainer from '../CardContainer/CardContainer';
 import SignInModal from '../SignInModal/SignInModal';
 import { getCourses } from '../../utils/apiCalls';
+import Dashboard from '../Dashboard/Dashboard';
 
 const App = () => {
   const { courses } = useSelector(state => state);
@@ -43,6 +44,7 @@ const App = () => {
       <NavBar />
       <SignInModal />
       <Route exact path="/" render={() => <CardContainer /> } />
+      <Route exact path="/dashboard" render={() => <Dashboard /> } />
       <Route exact path="/courses/:id" render={({ match }) => <CourseDetail id={match.params.id} /> } />
       {error && <h1>{error}</h1>}
     </div>
