@@ -3,10 +3,15 @@
   height: 375px;
   width: 242px;
   margin: 10px;
+  color: #2B3551;
+  text-align: left;
+  box-shadow: 0px 5px 5px grey;
+  transition: transform .2s;
+  &:hover { transform: scale(1.07); }
 }
 
 .thumbnail {
-  border-bottom: 1px solid gray;
+  border-bottom: 2px solid #453B7F;
   // height: 180px;
   width: 240px;
 }
@@ -48,4 +53,25 @@
   height: 30px;
   font-size: .8em;
   padding: 0;
+}
+
+.add-to-list-btn {
+  background-color: #3b4a7f;
+  color: #fff;
+  text-decoration: none;
+  transition: transform .2s;
+  &:hover { font-style:italic;
+    transform: scale(1.2);
+    border-radius: 30px;
+    text-decoration: none; }
+}
+
+.begin-course-btn {
+  background-color: #8AE588;
+  text-decoration: none;
+  transition: transform .2s;
+  &:hover { font-style:italic;
+    transform: scale(1.2);
+    border-radius: 30px;
+    text-decoration: none; }
 }

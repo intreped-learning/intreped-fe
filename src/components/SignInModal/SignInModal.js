@@ -83,7 +83,7 @@ const SignInModal = () => {
           value={password}
           onChange={handleChange}
         />
-        {error && error}
+        {error && <p className="sign-in-error">{ error }</p>} 
         <section className='buttons'>
           <button
             className='login-btn'

@@ -9,11 +9,11 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  height: 40vh;
+  height: 55vh;
   justify-content: center;
   left: 30vw;
   position: absolute;
-  top: 30vh;
+  top: 20vh;
   width: 40vw;
 }
 
@@ -24,15 +24,36 @@
   width: 80%;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 40%;
-
-  button {
+.login-btn,
+.cancel-btn {
+    width: 75px;
     border-radius: 10px;
     margin-top: 20px;
-    width: 30%;
+    margin: 20px;
+}
+
+.login-btn {
+  background-color: #8AE588;
+  transition: transform .2s;
+  &:hover {
+    font-style: italic;
+    transform: scale(1.2);
+    border-radius: 30px;
   }
+}
+
+.cancel-btn {
+  background-color: rgb(187, 47, 47);
+  color: #fff;
+  transition: transform .2s;
+  &:hover {
+    font-style: italic;
+    transform: scale(1.2);
+    border-radius: 30px;
+  }
+}
+
+.sign-in-error {
+  color: rgb(187, 47, 47);
+  font-style: italic;
 }

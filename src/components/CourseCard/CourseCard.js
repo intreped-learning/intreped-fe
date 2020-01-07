@@ -21,8 +21,8 @@ const CourseCard = ({ id, category, title, description, thumbnail }) => {
           <h3 className="title">{title}</h3>
           <p className="description">{description}</p>
           <div className="card-buttons">
-            <button onClick={(e) => addToMyList(e)}>Add To My List</button>
-            <button>Begin Course</button>
+            <button className="add-to-list-btn" onClick={(e) => addToMyList(e)}>Add To My List</button>
+            <button className="begin-course-btn">Begin Course</button>
           </div>
         </div>
       </div>

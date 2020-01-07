@@ -14,6 +14,7 @@ export const Header = () => {
         </h1>
       </Link>
       <div>
+
         <button className="sign-in-btn" onClick={() => dispatch({type:'TOGGLE_MODAL'})}> Sign In </button>
         <button className="sign-up-btn"> Sign Up </button>
       </div>
