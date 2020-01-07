@@ -1,11 +1,22 @@
 import ReactModal from 'react-modal';
-import { userState } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './SignInModal.scss';
 
 
 const SignInModal = () => {
   const { modal } = useSelector(state => state);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleChange = (e) => {
+    if (e.target.name === username) {
+      setUsername(e.target.value)
+    } else {
+      setPassword(e.target.value)
+    }
+  }
+
   return (
     <ReactModal
       ariaHideApp={false}
@@ -31,7 +42,16 @@ const SignInModal = () => {
           type='text'
           name='username'
           className='username-input'
-
+          value={username}
+          onChange={handleChange}
+        />
+        <label className='password-label' htmlFor='password'>Password:</label>
+        <input
+          type='text'
+          name='password'
+          className='password-input'
+          value={password}
+          onChange={handleChange}
         />
       </form>
     </ReactModal>
