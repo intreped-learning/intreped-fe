@@ -8,7 +8,7 @@ const NavBar = () => {
   const { currentCategory } = useSelector(state => state);
   const toggle = () => setIsOpen(!isOpen);
 
-  const handleChange = (e) => {
+  const handleChangeDropDown = (e) => {
     dispatch({
       type: 'CHANGE_CATEGORY',
       payload: e.target.value
@@ -19,11 +19,11 @@ const NavBar = () => {
   return (
     <nav className="nav-bar">
       <form className="search-options">
-        <select id="category-select" value={currentCategory} onChange = {handleChange}>
+        <select id="category-select" value={currentCategory} onChange = {handleChangeDropDown}>
           <option value="All Categories">All Categories</option>
           <option value="Engagement Strategies">Engagement Strategies</option>
           <option value="Classroom Management">Classroom Management</option>
-          <option value="Lesson Planning">Lesson Planning</option>
+          <option value="Effective Lesson Planning">Lesson Planning</option>
           <option value="Culturally Responsive Teaching">Culturally Responsive Teaching</option>
           <option value="Data-Driven Instruction">Data-Driven Instruction</option>
         </select>
