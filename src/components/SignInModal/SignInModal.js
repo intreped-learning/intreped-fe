@@ -33,9 +33,10 @@ const SignInModal = () => {
       dispatch({
         type: 'TOGGLE_MODAL'
       })
+      setError('');
     }
     setUsername('');
-    setPassword('')
+    setPassword('');
   }
 
   const handleClose = (e) => {
@@ -82,6 +83,7 @@ const SignInModal = () => {
           value={password}
           onChange={handleChange}
         />
+        {error && error}
         <section className='buttons'>
           <button
             className='login-btn'
