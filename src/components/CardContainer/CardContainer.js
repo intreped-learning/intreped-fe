@@ -5,7 +5,6 @@ import './CardContainer.scss';
 
 const CardContainer = () => {
   const { courses } = useSelector(state => state);
-  console.log(courses)
   const courseCards = courses.map(course => {
     return (
       <CourseCard
