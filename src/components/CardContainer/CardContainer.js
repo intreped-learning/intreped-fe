@@ -6,7 +6,7 @@ import './CardContainer.scss';
 const CardContainer = () => {
   const { courses, currentCategory } = useSelector(state => state);
   let determineCourses = () => {
-    if (currentCategory === "all") {
+    if (currentCategory === "All Categories") {
       return courses
     } else {
       return courses.filter(course => course.category === currentCategory)
