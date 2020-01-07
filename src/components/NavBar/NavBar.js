@@ -19,7 +19,6 @@ const NavBar = () => {
   return (
     <nav className="nav-bar">
       <form className="search-options">
-        <label htmlFor="category-select" id="categories">Course Categories</label>
         <select id="category-select" value={currentCategory} onChange = {handleChange}>
           <option value="All Categories">All Categories</option>
           <option value="Engagement Strategies">Engagement Strategies</option>
