@@ -58,6 +58,7 @@ const SignInModal = () => {
       overlayClassName="SignInFormOverlay"
     >
       <form className="sign-in-form">
+        <h2 className='login-header'>Log-In</h2>
         <label className='username-label' htmlFor='username'>Username:</label>
         <input
           type='text'
