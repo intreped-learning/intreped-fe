@@ -1,18 +1,19 @@
 header {
+  align-items: center;
   background-color: #453B7F;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  width: 100vw;
 }
 
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
   color: #fff; 
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-self: flex-start;
+  margin: 0;
   padding: 10px; 
   width: 15%;
-  margin: 0;
-  display: inline-block;
-  justify-self: flex-start;
 }
 
 .ed {
@@ -24,16 +25,16 @@ h1 {
 }
 
 .sign-in-btn {
-  color: #fff;
   background-color: transparent;
   border: none;
+  color: #fff;
 }
 
 .sign-up-btn {
   background-color: #8AE588;
   border-radius: 30px;
   border: 1px solid transparent;
+  height: 35px;
   margin: 15px;
   padding: 5px;
-  height: 35px;
 }
