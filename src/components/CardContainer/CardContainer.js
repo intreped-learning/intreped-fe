@@ -6,17 +6,19 @@ import './CardContainer.scss';
 const CardContainer = () => {
   const { courses, currentCategory, currentSearch } = useSelector(state => state);
   let determineCourses = () => {
-    if (currentCategory === "All Categories" && currentSearch === '') {
+    if (currentCategory === "All Categories" ) {
       return courses
-    } else if (currentSearch !== '') {
-        return courses.filter(course => course.title.toLowerCase().includes(currentSearch.toLowerCase()) || course.description.toLowerCase().includes(currentSearch.toLowerCase()))
     }
       else {
       return courses.filter(course => course.category === currentCategory)
     }
   }
+  let searchCourses = () => {
+    return determineCourses().filter(course => course.title.toLowerCase().includes(currentSearch.toLowerCase()) || course.description.toLowerCase().includes(currentSearch.toLowerCase()))
+  }
 
-  const courseCards = determineCourses().map(course => {
+
+  const courseCards = searchCourses().map(course => {
     return (
       <CourseCard
         key={course.id}
