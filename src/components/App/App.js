@@ -22,13 +22,8 @@ const App = () => {
   return (
     <div className="App">
       <NavBar />
-<<<<<<< HEAD
-      <Route exact path="/" render={() => <CardContainer courses={courses} /> } />
-      <Route exact path="/courses/:id" render={({ match }) => <CourseDetail id={match.params.id} courses={courses} /> } />
-=======
       <CardContainer courses={courses} />
       {error && <h1>{error}</h1>}
->>>>>>> Edit use effect to incorporate get courses api call
     </div>
   );
 }
