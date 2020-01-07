@@ -12,7 +12,7 @@ export const getCourses = async () => {
 export const addToTeacherCourses = async (courseId) => {
   const body = {
     teacher_id: 1,
-    "course_id": `${courseId}`,
+    "course_id": `${courseId}`, 
     current_time_marker: "0s",
     is_favorite: true,
     is_complete: false,
