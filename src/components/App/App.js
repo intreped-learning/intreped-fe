@@ -18,6 +18,10 @@ const App = () => {
 
 
   useEffect(() => {
+    dispatch({
+      type: 'SEARCH_COURSES',
+      payload: ''
+    })
     setError('')
     setIsLoading(true)
     getCourses()
