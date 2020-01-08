@@ -1,19 +1,21 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import configureMockStore from 'redux-mock-store'
+import thunk from 'redux-thunk';
 import SignInModal from './SignInModal';
-import { rootReducer } from '../../reducers';
+
+const mockStore = configureMockStore([thunk]);
 
 describe('SignInModal', () => {
   it('should match snapshot', () => {
-    const mockStore = createStore(rootReducer, {
+    const store = mockStore({
       teacher: 'Mr. Feeny',
       courses: {},
       modalOpen: true
     });
     const getWrapper = () => mount(
-      <Provider store={mockStore}>
+      <Provider store={store}>
         <SignInModal/>
       </Provider>
     );
