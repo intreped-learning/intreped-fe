@@ -2,9 +2,15 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import CourseCard from '../CourseCard/CourseCard';
 import './CardContainer.scss';
+import classroomManagement from '../../images/classroom-management-center.png';
+import culturallyResponsiveTeaching from '../../images/culturally-responsive-teaching.png';
+import dataDrivenInstruction from '../../images/data-driven-ddi-badge.png';
+import engagementStategies from '../../images/engagement-strategies-es.png';
+import lessonPlanning from '../../images/lesson-planning.png';
 
 const CardContainer = () => {
   const dispatch = useDispatch();
+  const badges = [classroomManagement, culturallyResponsiveTeaching, dataDrivenInstruction, engagementStategies, lessonPlanning]
   const { courses, currentCategory, currentSearch } = useSelector(state => state);
   let determineCourses = () => {
     if (currentCategory === "All Categories" ) {
