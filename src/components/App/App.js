@@ -11,7 +11,7 @@ import { getCourses } from '../../utils/apiCalls';
 import Dashboard from '../Dashboard/Dashboard';
 
 const App = () => {
-  const { courses } = useSelector(state => state);
+  const { courses, errorMessage } = useSelector(state => state);
 
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
@@ -21,6 +21,10 @@ const App = () => {
   useEffect(() => {
     dispatch({
       type: 'SEARCH_COURSES',
+      payload: ''
+    })
+    dispatch({
+      type: 'CREATE_ERROR_MESSAGE',
       payload: ''
     })
     setError('')
@@ -43,10 +47,14 @@ const App = () => {
       <Header />
       <NavBar />
       <SignInModal />
+      <main>
       <Route exact path="/" render={() => <CardContainer /> } />
       <Route exact path="/dashboard" render={() => <Dashboard /> } />
       <Route exact path="/courses/:id" render={({ match }) => <CourseDetail id={match.params.id} /> } />
       {error && <h1>{error}</h1>}
+      {errorMessage && <p className="search-error">{ errorMessage }</p>} 
+      </main>
+      
     </div>
   );
 }

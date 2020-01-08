@@ -17,6 +17,10 @@ const NavBar = () => {
 
   const handleChangeInput = (e) => {
     dispatch({
+      type: 'CREATE_ERROR_MESSAGE',
+      payload: ''
+    })
+    dispatch({
       type: 'SEARCH_COURSES',
       payload: e.target.value
     })
