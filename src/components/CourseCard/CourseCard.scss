@@ -12,7 +12,6 @@
 
 .thumbnail {
   border-bottom: 2px solid #453B7F;
-  // height: 180px;
   width: 240px;
 }
 
@@ -24,16 +23,20 @@
 
 .title {
   display: inline-block;
-  height: 60px;
+  height: 40px;
   width: 100%;
   font-size: 1.0em;
   overflow: hidden;
 }
 
+.badge-icon {
+  float: right;
+  margin: 2.5px;
+}
+
 .category {
   display: inline-block;
   font-size: .8em;
-  width: 100%;
 }
 
 .description {
@@ -43,7 +46,7 @@
   height: 60px;
   width: 100%;
   text-overflow: ellipsis;
-  text-align: left;
+  text-align: center;
   font-size: .8em;
 }
 

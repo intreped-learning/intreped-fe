@@ -4,11 +4,13 @@ import { courses } from './courses';
 import { modalOpen } from './modalOpen';
 import { currentCategory } from './currentCategory'; 
 import { currentSearch } from './currentSearch';
+import { errorMessage } from './errorMessage';
 
 export const rootReducer = combineReducers({
   teacher,
   courses,
   modalOpen,
   currentCategory,
-  currentSearch
+  currentSearch,
+  errorMessage
 });
