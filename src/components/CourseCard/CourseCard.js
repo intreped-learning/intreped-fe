@@ -14,7 +14,6 @@ const CourseCard = ({ id, category, title, description, thumbnail, badge }) => {
 
   const categoryCheck = () => {
     if(category === "Culturally Responsive Teaching") {
-      console.log("moose")
       return "CLDE"
     } else {
       return category
