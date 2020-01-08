@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CourseCard should match snapshot 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+    >
+      <CourseCard>
+        <Link
+          to="courses/undefined"
+        >
+          <LinkAnchor
+            href="/courses/undefined"
+            navigate={[Function]}
+          >
+            <a
+              href="/courses/undefined"
+              onClick={[Function]}
+            >
+              <div
+                className="coursecard"
+              >
+                <img
+                  className="thumbnail"
+                />
+                <div
+                  className="course-info"
+                >
+                  <h3
+                    className="category"
+                  />
+                  <h3
+                    className="title"
+                  />
+                  <p
+                    className="description"
+                  />
+                  <div
+                    className="card-buttons"
+                  >
+                    <button
+                      onClick={[Function]}
+                    >
+                      Add To My List
+                    </button>
+                    <button>
+                      Begin Course
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </LinkAnchor>
+        </Link>
+      </CourseCard>
+    </Provider>
+  </Router>
+</BrowserRouter>
+`;
