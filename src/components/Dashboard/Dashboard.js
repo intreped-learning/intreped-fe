@@ -22,8 +22,8 @@ const Dashboard = () => {
       return (
         <Link to={route}>
           <div className='dashboard-course'>
-            <h3 className='course-title'>{course.title}</h3>
-            <img src={course.thumbnail} alt={course.title}/>
+            <h5 className='course-title'>{course.title}</h5>
+            <img className='course-thumbnail' src={course.thumbnail} alt={course.title}/>
           </div>
         </Link>  
       )
@@ -38,16 +38,16 @@ const Dashboard = () => {
       {console.log("watchList", watchlistCourses)}
       {console.log('inProgess', inProgressCourses)
       }
+      <h2>In Progress</h2>
       <section className='courses-in-progress'>
-        <h2>In Progress</h2>
         {formatCourseInfo(inProgressCourses)}
       </section>
+      <h2>Watch List</h2>
       <section className='watch-list'>
-        <h2>Watch List</h2>
         {formatCourseInfo(watchlistCourses)}
       </section>
+      <h2>Badges</h2>
       <section className='badges'>
-        <h2>Badges</h2>
       </section>
     </main>
   )
