@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import './NavBar.scss';
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
   return (
     <nav className="nav-bar">
       <form className="search-options">

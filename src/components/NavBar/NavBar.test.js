@@ -1,5 +1,13 @@
-describe("magikNavBar", () => {
-  it('should pass a test', () => {
-    expect(true).toEqual(true);
-  })
-})
+import React from 'react';
+import { shallow } from 'enzyme';
+import NavBar from './NavBar';
+
+describe('NavBar', () => {
+  it('should match snapshot', () => {
+    const getWrapper = () => shallow(
+      <NavBar/>
+    );
+    const wrapper = getWrapper();
+    expect(wrapper).toMatchSnapshot();
+  });
+});

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar should match snapshot 1`] = `
+<nav
+  className="nav-bar"
+>
+  <form
+    className="search-options"
+  >
+    <label
+      htmlFor="category-select"
+      id="categories"
+    >
+      Course Categories
+    </label>
+    <select
+      id="category-select"
+    >
+      <option
+        value="engagement"
+      >
+        Engagement Strategies
+      </option>
+      <option
+        value="classroom"
+      >
+        Classroom Management
+      </option>
+      <option
+        value="planning"
+      >
+        Lesson Planning
+      </option>
+      <option
+        value="culture"
+      >
+        Culturally Responsive Teaching
+      </option>
+      <option
+        value="data"
+      >
+        Data-Driven Instruction
+      </option>
+    </select>
+    <input
+      placeholder="Search courses"
+      type="text"
+    />
+  </form>
+</nav>
+`;
