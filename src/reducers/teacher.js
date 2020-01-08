@@ -3,10 +3,7 @@ export const teacher = (state = {}, action) => {
     case 'LOGIN':
       return action.payload;
     case 'LOGOUT':
-      return {
-        ...state,
-        teacher: {}
-      }
+      return {}
     default:
       return state;
   }

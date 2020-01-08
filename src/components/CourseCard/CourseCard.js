@@ -6,11 +6,13 @@ import { addToTeacherCourses } from '../../utils/apiCalls';
 const CourseCard = ({ id, category, title, description, thumbnail, badge }) => {
   const route = `courses/${id}`
   const [error, setError] = useState('');
+  const [feedback, setFeedback] = useState('');
 
   const addToMyList = async (e) => {
     e.preventDefault();
     try {
       const res = await addToTeacherCourses(id)
+      setFeedback('Success! Course Added!')
     } catch (error) {
         setError('Course is already in your lists!')
     }
@@ -38,6 +40,7 @@ const CourseCard = ({ id, category, title, description, thumbnail, badge }) => {
             <button className="begin-course-btn">Begin Course</button>
           </div>
           {error && <p>{error}</p>}
+          {feedback && <p>{feedback}</p>}
         </div>
       </div>
     </Link>
