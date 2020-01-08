@@ -41,9 +41,9 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <NavBar />
       <SignInModal />
-      <Route exact path="/" render={() => <CardContainer /> } />
+      <Route exact path="/" render={() => <NavBar /> } />
+      <Route exact path="/" render={() => <CardContainer />} />
       <Route exact path="/dashboard" render={() => <Dashboard /> } />
       <Route exact path="/courses/:id" render={({ match }) => <CourseDetail id={match.params.id} /> } />
       {error && <h1>{error}</h1>}

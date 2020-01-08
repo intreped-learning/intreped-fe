@@ -25,9 +25,7 @@ export const addToTeacherCourses = async (courseId) => {
       'content-type': 'application/json'
     }
   }
-  console.log(options)
   const res = await fetch(`${baseUrl}teacher_courses/`, options);
-  console.log(res)
   if (!res.ok) {
     throw Error('Unable to add course to your list');
   };
