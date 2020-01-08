@@ -35,6 +35,14 @@ const CardContainer = () => {
 
 
   const courseCards = searchCourses().map(course => {
+    const findBadge = () => {
+      return course.category.split(' ').map(courseWord => {
+        const test = badges.filter(badgeName => badgeName.includes(courseWord.toLowerCase()))
+        return test
+      })
+    } 
+    const correctBadge = findBadge().filter(badgeOption => badgeOption.length !== 0)
+  
     return (
       <CourseCard
         key={course.id}
@@ -43,6 +51,7 @@ const CardContainer = () => {
         title={course.title}
         description={course.description}
         thumbnail = {course.thumbnail}
+        badge = {correctBadge[0]}
       />
     )
   })
