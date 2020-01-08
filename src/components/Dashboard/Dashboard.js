@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 const Dashboard = () => {
   const { courses, teacher } = useSelector(state => state);
   
-  const filterInProgress = teacher.teacher_courses.filter(course => course.is_in_progress === true);
+  const filterCompleted = teacher.teacher_courses.filter(course => course.is_complete === true);
 
   const filterWatchList = teacher.teacher_courses.filter(course => course.is_complete === false);
 
@@ -31,14 +31,14 @@ const Dashboard = () => {
   }
 
   const watchlistCourses = getCourseInfo(filterWatchList)
-  const inProgressCourses = getCourseInfo(filterInProgress)
+  const completedCourses = getCourseInfo(filterCompleted)
 
   return (
     <main className='dashboard'>
-      <h2>In Progress</h2>
+      <h2>Completed Courses</h2>
       <section className='courses-in-progress'>
-        {formatCourseInfo(inProgressCourses)}
-        {!inProgressCourses.length && <h2 className='blank-field-msg'>No Courses Started Yet!</h2>}
+        {formatCourseInfo(completedCourses)}
+        {!completedCourses.length && <h2 className='blank-field-msg'>No Courses Started Yet!</h2>}
       </section>
       <h2>Watch List</h2>
       <section className='watch-list'>
