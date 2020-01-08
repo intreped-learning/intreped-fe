@@ -1,15 +1,29 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import './CourseCard.scss';
 import { Link } from 'react-router-dom';
 import { addToTeacherCourses } from '../../utils/apiCalls';
 
-const CourseCard = ({ id, category, title, description, thumbnail }) => {
+const CourseCard = ({ id, category, title, description, thumbnail, badge }) => {
   const route = `courses/${id}`
+  const [error, setError] = useState('');
+  const [feedback, setFeedback] = useState('');
 
-  const addToMyList = (e) => {
+  const addToMyList = async (e) => {
     e.preventDefault();
-    addToTeacherCourses(id)
-      .then(teacherCourse => console.log(teacherCourse));
+    try {
+      const res = await addToTeacherCourses(id)
+      setFeedback('Success! Course Added!')
+    } catch (error) {
+        setError('Course is already in your lists!')
+    }
+  }
+
+  const categoryCheck = () => {
+    if(category === "Culturally Responsive Teaching") {
+      return "CLDE"
+    } else {
+      return category
+    }
   }
 
   return (
@@ -17,13 +31,16 @@ const CourseCard = ({ id, category, title, description, thumbnail }) => {
       <div className="coursecard">
         <img src={thumbnail} alt={title} className="thumbnail"/>
         <div className="course-info">
-          <h3 className="category">{category}</h3>
+          <img src={badge} alt="badge" width="50px" className="badge-icon"/>
+          <h3 className="category">{categoryCheck()}</h3>
           <h3 className="title">{title}</h3>
           <p className="description">{description}</p>
           <div className="card-buttons">
-            <button onClick={(e) => addToMyList(e)}>Add To My List</button>
-            <button>Begin Course</button>
+            <button className="add-to-list-btn" onClick={(e) => addToMyList(e)}>Add To My List</button>
+            <button className="begin-course-btn">Begin Course</button>
           </div>
+          {error && <p>{error}</p>}
+          {feedback && <p>{feedback}</p>}
         </div>
       </div>
     </Link>

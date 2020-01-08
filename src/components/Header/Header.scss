@@ -1,6 +1,6 @@
 header {
   align-items: center;
-  background-color: #453B7F;
+  background-color: #3b4a7f;
   display: flex;
   justify-content: space-between;
   width: 100vw;
@@ -44,4 +44,41 @@ h1 {
   transition: transform .2s;
   &:hover { font-style:italic;
   transform: scale(1.5); }
+}
+
+.signed-in-info{
+  align-items: flex-end;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1vh;
+  max-width: 500px;
+  width: 50vw;
+}
+
+.teacher-name {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  margin: unset;
+}
+
+.link-to-dashboard {
+  color: #fff;
+}
+
+.link-to-dashboard:hover {
+  color: #8AE588;
+  font-size: 1.1rem;
+}
+
+.sign-out-btn {
+  background-color: rgb(187, 47, 47);
+  border-radius: 30px;
+  color: #fff;
+  transition: transform .2s;
+  &:hover {
+    font-style: italic;
+    transform: scale(1.2);
+  }
 }
