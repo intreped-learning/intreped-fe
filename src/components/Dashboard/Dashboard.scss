@@ -4,8 +4,13 @@
   align-items: center;
   padding: 20px;
 
+  h2 {
+    color: #2B3551;
+  }
+
   section {
-    border: 2px solid #000000;
+    border: 2px solid #2B3551;
+    border-radius: 10px;
     display: flex;
     flex-direction: row;
     height: 40vh;
@@ -16,10 +21,25 @@
 }
 
 .dashboard-course {
-  padding: 5px;
+  background: #3b4a7f;
+  border-radius: 10px;
+  color: #ffffff;
+  height: 35vh;
+  padding: 4px;
+  margin: 5px;
+  width: 35vw;
+}
+
+.dashboard-course:hover {
+  height: 36vh;
+  width: 36vw;
+}
+
+.course-title {
+  margin-top: 5px;
 }
 
 .course-thumnail {
   height: 40px;
-  width: 40px;
+  width: 30vw;
 }
