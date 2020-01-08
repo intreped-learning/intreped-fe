@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import SignInModal from './SignInModal';
@@ -11,7 +11,7 @@ describe('SignInModal', () => {
       teacher: 'Mr. Feeny',
       courses: {},
       modalOpen: true
-    })
+    });
     const getWrapper = () => mount(
       <Provider store={mockStore}>
         <SignInModal/>
@@ -19,5 +19,5 @@ describe('SignInModal', () => {
     );
     const wrapper = getWrapper();
     expect(wrapper).toMatchSnapshot();
-  })
+  });
 });
