@@ -36,6 +36,7 @@ const Dashboard = () => {
   return (
     <main className='dashboard'>
       <h2>Completed Courses</h2>
+      <h6>Click To Rewatch!</h6>
       <section className='courses-in-progress'>
         {formatCourseInfo(completedCourses)}
         {!completedCourses.length && <h2 className='blank-field-msg'>No Courses Started Yet!</h2>}
