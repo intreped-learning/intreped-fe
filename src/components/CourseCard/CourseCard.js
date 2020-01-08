@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import './CourseCard.scss';
 import { Link } from 'react-router-dom';
 import { addToTeacherCourses } from '../../utils/apiCalls';
 
 const CourseCard = ({ id, category, title, description, thumbnail }) => {
   const route = `courses/${id}`
+  const [error, setError] = useState('');
 
-  const addToMyList = (e) => {
+  const addToMyList = async (e) => {
     e.preventDefault();
-    addToTeacherCourses(id)
-      .then(teacherCourse => console.log(teacherCourse));
+    try {
+      const res = await addToTeacherCourses(id)
+    } catch (error) {
+        setError('Course is already in your lists!')
+    }
   }
 
   return (
@@ -24,6 +28,7 @@ const CourseCard = ({ id, category, title, description, thumbnail }) => {
             <button className="add-to-list-btn" onClick={(e) => addToMyList(e)}>Add To My List</button>
             <button className="begin-course-btn">Begin Course</button>
           </div>
+          {error && <p>{error}</p>}
         </div>
       </div>
     </Link>
