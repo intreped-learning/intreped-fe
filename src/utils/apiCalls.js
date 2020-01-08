@@ -12,7 +12,7 @@ export const getCourses = async () => {
 export const addToTeacherCourses = async (courseId) => {
   const body = {
     teacher_id: 1,
-    "course_id": `${courseId}`, 
+    course_id: courseId, 
     current_time_marker: "0s",
     is_favorite: true,
     is_complete: false,
@@ -25,7 +25,9 @@ export const addToTeacherCourses = async (courseId) => {
       'content-type': 'application/json'
     }
   }
+  console.log(options)
   const res = await fetch(`${baseUrl}teacher_courses/`, options);
+  console.log(res)
   if (!res.ok) {
     throw Error('Unable to add course to your list');
   };
@@ -46,4 +48,24 @@ export const teacherSignIn = async (username, password) => {
   } else {
     return [];
   }
+}
+
+export const completeCourse = async (id, duration) => {
+  const body = {
+    current_time_marker: duration,
+    is_complete: true
+  }
+  const options = {
+    method: 'PATCH',
+    body: JSON.stringify(body),
+    headers: {
+      'content-type': 'application/json'
+    }
+  }  
+  const res = await fetch(`${baseUrl}teacher_courses/${id}`, options);
+  if (!res.ok) {
+    throw Error('Something went wrong, please try again');
+  }
+  const updatedCourse = await res.json();
+  return updatedCourse
 }
