@@ -35,19 +35,19 @@ const Dashboard = () => {
 
   return (
     <main className='dashboard'>
-      {console.log("watchList", watchlistCourses)}
-      {console.log('inProgess', inProgressCourses)
-      }
       <h2>In Progress</h2>
       <section className='courses-in-progress'>
         {formatCourseInfo(inProgressCourses)}
+        {!inProgressCourses.length && <h2 className='blank-field-msg'>No Courses Started Yet!</h2>}
       </section>
       <h2>Watch List</h2>
       <section className='watch-list'>
         {formatCourseInfo(watchlistCourses)}
+        {!watchlistCourses.length && <h2 className='blank-field-msg' >Add Some Courses To Your Watch List!</h2>}
       </section>
       <h2>Badges</h2>
       <section className='badges'>
+        {!teacher.teacher_badges.length && <h2 className='blank-field-msg'>Complete Some Courses To Start Earning Badges!</h2>}
       </section>
     </main>
   )

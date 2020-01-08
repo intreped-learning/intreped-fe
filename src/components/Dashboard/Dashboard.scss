@@ -9,7 +9,7 @@
   }
 
   section {
-    border: 2px solid #2B3551;
+    border: 5px solid #2B3551;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -42,4 +42,9 @@
 .course-thumnail {
   height: 40px;
   width: 30vw;
+}
+
+.blank-field-msg {
+  align-self: center;
+  margin: 0 auto;
 }
