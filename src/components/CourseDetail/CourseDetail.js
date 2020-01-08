@@ -38,7 +38,7 @@ const CourseDetail = ({ id }) => {
   }
 
   const toggleModal = () => {
-    setModalState(!modalState)
+    setModalState(!modalState);
   }
 
   return (

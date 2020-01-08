@@ -5,6 +5,7 @@ import { modalOpen } from './modalOpen';
 import { currentCategory } from './currentCategory'; 
 import { currentSearch } from './currentSearch';
 import { errorMessage } from './errorMessage';
+import { badgeProgress } from './badgeProgress';
 
 export const rootReducer = combineReducers({
   teacher,
@@ -12,5 +13,6 @@ export const rootReducer = combineReducers({
   modalOpen,
   currentCategory,
   currentSearch,
-  errorMessage
+  errorMessage,
+  badgeProgress
 });
