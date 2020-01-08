@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CourseDetail.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import YouTube from 'react-youtube';
 import { completeCourse, teacherSignIn } from '../../utils/apiCalls';
+import CourseCompleteModal from '../CourseCompletedModal/CourseCompletedModal';
 
 const CourseDetail = ({ id }) => {
   const dispatch = useDispatch();
+  const [modalState, setModalState] = useState(false);
   const { courses, teacher } = useSelector(state => state);
   const currentCourse = courses.find(course => course.id === parseInt(id));
   const teacherCourse = teacher.teacher_courses.find(course => course.course_id === parseInt(id));
@@ -27,10 +29,19 @@ const CourseDetail = ({ id }) => {
       type: 'LOGIN',
       payload: teacherCourseRes[0]
     })
+    updateBadges()
+    toggleModal();
+  }
+
+  const updateBadges = () => {
+    
+  }
+
+  const toggleModal = () => {
+    setModalState(!modalState)
   }
 
   return (
-    
     <div className="course-detail">
       <YouTube
         videoId={videoId}
@@ -41,8 +52,9 @@ const CourseDetail = ({ id }) => {
           <h3 className="category">{currentCourse.category}</h3>
           <h3 className="title">{currentCourse.title}</h3>
           <p className="description">{currentCourse.description}</p>
-        </div>
       </div>
+      <CourseCompleteModal modalState={modalState} toggleModal={toggleModal}/>
+    </div>
   );
 };
 
