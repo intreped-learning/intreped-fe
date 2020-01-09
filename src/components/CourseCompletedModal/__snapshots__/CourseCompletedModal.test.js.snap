@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CourseCompletedModal should match snapshot 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+    >
+      <CourseCompletedModal
+        category="Engagement"
+        modalState={false}
+        toggleModal={[MockFunction]}
+      >
+        <Modal
+          ariaHideApp={false}
+          bodyOpenClassName="ReactModal__Body--open"
+          className="CourseCompletedFormModal"
+          closeTimeoutMS={0}
+          contentLabel="CourseCompleted Form"
+          isOpen={false}
+          overlayClassName="CourseCompletedFormOverlay"
+          parentSelector={[Function]}
+          portalClassName="ReactModalPortal"
+          role="dialog"
+          shouldCloseOnEsc={true}
+          shouldCloseOnOverlayClick={true}
+          shouldFocusAfterRender={true}
+          shouldReturnFocusAfterClose={true}
+          style={
+            Object {
+              "content": Object {},
+              "overlay": Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.85)",
+                "bottom": 0,
+                "left": 0,
+                "position": "fixed",
+                "right": 0,
+                "top": 0,
+              },
+            }
+          }
+        >
+          <Portal
+            containerInfo={
+              <div
+                class="ReactModalPortal"
+              />
+            }
+          >
+            <ModalPortal
+              ariaHideApp={false}
+              bodyOpenClassName="ReactModal__Body--open"
+              className="CourseCompletedFormModal"
+              closeTimeoutMS={0}
+              contentLabel="CourseCompleted Form"
+              defaultStyles={
+                Object {
+                  "content": Object {
+                    "WebkitOverflowScrolling": "touch",
+                    "background": "#fff",
+                    "border": "1px solid #ccc",
+                    "borderRadius": "4px",
+                    "bottom": "40px",
+                    "left": "40px",
+                    "outline": "none",
+                    "overflow": "auto",
+                    "padding": "20px",
+                    "position": "absolute",
+                    "right": "40px",
+                    "top": "40px",
+                  },
+                  "overlay": Object {
+                    "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "fixed",
+                    "right": 0,
+                    "top": 0,
+                  },
+                }
+              }
+              isOpen={false}
+              overlayClassName="CourseCompletedFormOverlay"
+              parentSelector={[Function]}
+              portalClassName="ReactModalPortal"
+              role="dialog"
+              shouldCloseOnEsc={true}
+              shouldCloseOnOverlayClick={true}
+              shouldFocusAfterRender={true}
+              shouldReturnFocusAfterClose={true}
+              style={
+                Object {
+                  "content": Object {},
+                  "overlay": Object {
+                    "backgroundColor": "rgba(0, 0, 0, 0.85)",
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "fixed",
+                    "right": 0,
+                    "top": 0,
+                  },
+                }
+              }
+            />
+          </Portal>
+        </Modal>
+      </CourseCompletedModal>
+    </Provider>
+  </Router>
+</BrowserRouter>
+`;
