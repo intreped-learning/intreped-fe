@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Dashboard.scss';
 import CourseCard from '../CourseCard/CourseCard';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+
 
 
 const Dashboard = () => {
-  const { courses, teacher } = useSelector(state => state);
+  const { courses, teacher, badgeProgress } = useSelector(state => state);
+  const dispatch = useDispatch();
   
   const filterCompleted = teacher.teacher_courses.filter(course => course.is_complete === true);
 
   const filterWatchList = teacher.teacher_courses.filter(course => course.is_complete === false);
+
+  useEffect(() => {
+    checkBadgeProgress();
+  })
 
   const getCourseInfo = (list) => {
     return list.map(course => courses.filter( e => e.id === course.course_id)[0]);
@@ -32,6 +38,22 @@ const Dashboard = () => {
 
   const watchlistCourses = getCourseInfo(filterWatchList)
   const completedCourses = getCourseInfo(filterCompleted)
+
+  const checkBadgeProgress = () => {
+    completedCourses.forEach(course => {
+      const shortHand = course.category.split(' ')[0];
+      const courseUpdate = {
+        ...badgeProgress,
+        [shortHand]: [...badgeProgress[shortHand], course.id]
+      };
+      if (!badgeProgress[shortHand].includes(course.id)) {
+        dispatch({
+          type: 'FINISH_COURSE',
+          payload: courseUpdate
+        })
+      }
+    })
+  }
 
   return (
     <main className='dashboard'>
