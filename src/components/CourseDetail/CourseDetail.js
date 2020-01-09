@@ -16,7 +16,7 @@ const CourseDetail = ({ id }) => {
     width: '640',
     playerVars: { // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
-      // controls: 0,
+      controls: 0,
       disablekb: 1,
     }
   };

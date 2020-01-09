@@ -1,10 +1,13 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './CourseCard.scss';
 import { Link } from 'react-router-dom';
-import { addToTeacherCourses } from '../../utils/apiCalls';
+import { addToTeacherCourses, teacherSignIn } from '../../utils/apiCalls';
 
 const CourseCard = ({ id, category, title, description, thumbnail, badge }) => {
   const route = `courses/${id}`
+  const { teacher } = useSelector(state => state);
+  const dispatch = useDispatch();
   const [error, setError] = useState('');
   const [feedback, setFeedback] = useState('');
 
@@ -13,9 +16,18 @@ const CourseCard = ({ id, category, title, description, thumbnail, badge }) => {
     try {
       const res = await addToTeacherCourses(id)
       setFeedback('Success! Course Added!')
+      updateTeacher();
     } catch (error) {
         setError('Course is already in your lists!')
     }
+  }
+
+  const updateTeacher = async () => {
+    const teacherUpdate = await teacherSignIn(teacher.username, teacher.password);
+    dispatch({
+      type: 'LOGIN',
+      payload: teacherUpdate[0]
+    });
   }
 
   const categoryCheck = () => {
