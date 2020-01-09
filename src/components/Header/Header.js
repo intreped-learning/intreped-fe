@@ -12,6 +12,9 @@ export const Header = () => {
     dispatch({
       type: 'LOGOUT'
     })
+    dispatch({
+      type: 'RESET_PROGRESS'
+    })
   }
   return (
     <header>
@@ -29,7 +32,7 @@ export const Header = () => {
         <div className='signed-in-info'>
         <p className='teacher-name'>Welcome {teacher.name}!</p>
         <Link to='/dashboard' className='link-to-dashboard'>Dashboard</Link>
-        <button className='sign-out-btn' onClick={handleLogOut}>Sign Out</button>
+        <button className='sign-out-btn' onClick={handleLogOut}><Link to='/'>Sign Out</Link></button>
         </div>}
     </header>
   )
