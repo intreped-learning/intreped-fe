@@ -1,148 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SignInModal should match snapshot 1`] = `
-<Provider
-  store={
-    Object {
-      "clearActions": [Function],
-      "dispatch": [Function],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
     }
-  }
->
-  <SignInModal>
-    <Modal
-      ariaHideApp={false}
-      bodyOpenClassName="ReactModal__Body--open"
-      className="SignInFormModal"
-      closeTimeoutMS={0}
-      contentLabel="SignIn Form"
-      isOpen={true}
-      overlayClassName="SignInFormOverlay"
-      parentSelector={[Function]}
-      portalClassName="ReactModalPortal"
-      role="dialog"
-      shouldCloseOnEsc={true}
-      shouldCloseOnOverlayClick={true}
-      shouldFocusAfterRender={true}
-      shouldReturnFocusAfterClose={true}
-      style={
+  >
+    <Provider
+      store={
         Object {
-          "content": Object {},
-          "overlay": Object {
-            "backgroundColor": "rgba(0, 0, 0, 0.85)",
-            "bottom": 0,
-            "left": 0,
-            "position": "fixed",
-            "right": 0,
-            "top": 0,
-          },
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
         }
       }
     >
-      <Portal
-        containerInfo={
-          <div
-            class="ReactModalPortal"
-          >
-            <div
-              class="ReactModal__Overlay ReactModal__Overlay--after-open SignInFormOverlay"
-              style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: rgba(0, 0, 0, 0.85);"
-            >
-              <div
-                aria-label="SignIn Form"
-                class="ReactModal__Content ReactModal__Content--after-open SignInFormModal"
-                role="dialog"
-                tabindex="-1"
-              >
-                <form
-                  class="sign-in-form"
-                >
-                  <h2
-                    class="login-header"
-                  >
-                    IntrepED Sign In
-                  </h2>
-                  <label
-                    class="username-label"
-                    for="username"
-                  >
-                    Username:
-                  </label>
-                  <input
-                    class="username-input"
-                    name="username"
-                    type="text"
-                    value=""
-                  />
-                  <label
-                    class="password-label"
-                    for="password"
-                  >
-                    Password:
-                  </label>
-                  <input
-                    class="password-input"
-                    name="password"
-                    type="password"
-                    value=""
-                  />
-                  
-                  <section
-                    class="buttons"
-                  >
-                    <button
-                      class="login-btn"
-                    >
-                      Login
-                    </button>
-                    <button
-                      class="cancel-btn"
-                    >
-                      Cancel
-                    </button>
-                  </section>
-                </form>
-              </div>
-            </div>
-          </div>
-        }
-      >
-        <ModalPortal
+      <SignInModal>
+        <Modal
           ariaHideApp={false}
           bodyOpenClassName="ReactModal__Body--open"
           className="SignInFormModal"
           closeTimeoutMS={0}
           contentLabel="SignIn Form"
-          defaultStyles={
-            Object {
-              "content": Object {
-                "WebkitOverflowScrolling": "touch",
-                "background": "#fff",
-                "border": "1px solid #ccc",
-                "borderRadius": "4px",
-                "bottom": "40px",
-                "left": "40px",
-                "outline": "none",
-                "overflow": "auto",
-                "padding": "20px",
-                "position": "absolute",
-                "right": "40px",
-                "top": "40px",
-              },
-              "overlay": Object {
-                "backgroundColor": "rgba(255, 255, 255, 0.75)",
-                "bottom": 0,
-                "left": 0,
-                "position": "fixed",
-                "right": 0,
-                "top": 0,
-              },
-            }
-          }
           isOpen={true}
           overlayClassName="SignInFormOverlay"
           parentSelector={[Function]}
@@ -166,88 +66,213 @@ exports[`SignInModal should match snapshot 1`] = `
             }
           }
         >
-          <div
-            className="ReactModal__Overlay ReactModal__Overlay--after-open SignInFormOverlay"
-            onClick={[Function]}
-            onMouseDown={[Function]}
-            style={
-              Object {
-                "backgroundColor": "rgba(0, 0, 0, 0.85)",
-                "bottom": 0,
-                "left": 0,
-                "position": "fixed",
-                "right": 0,
-                "top": 0,
-              }
+          <Portal
+            containerInfo={
+              <div
+                class="ReactModalPortal"
+              >
+                <div
+                  class="ReactModal__Overlay ReactModal__Overlay--after-open SignInFormOverlay"
+                  style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: rgba(0, 0, 0, 0.85);"
+                >
+                  <div
+                    aria-label="SignIn Form"
+                    class="ReactModal__Content ReactModal__Content--after-open SignInFormModal"
+                    role="dialog"
+                    tabindex="-1"
+                  >
+                    <form
+                      class="sign-in-form"
+                    >
+                      <h2
+                        class="login-header"
+                      >
+                        IntrepED Sign In
+                      </h2>
+                      <label
+                        class="username-label"
+                        for="username"
+                      >
+                        Username:
+                      </label>
+                      <input
+                        class="username-input"
+                        name="username"
+                        type="text"
+                        value=""
+                      />
+                      <label
+                        class="password-label"
+                        for="password"
+                      >
+                        Password:
+                      </label>
+                      <input
+                        class="password-input"
+                        name="password"
+                        type="password"
+                        value=""
+                      />
+                      
+                      <section
+                        class="buttons"
+                      >
+                        <button
+                          class="login-btn"
+                        >
+                          Login
+                        </button>
+                        <button
+                          class="cancel-btn"
+                        >
+                          Cancel
+                        </button>
+                      </section>
+                    </form>
+                  </div>
+                </div>
+              </div>
             }
           >
-            <div
-              aria-label="SignIn Form"
-              className="ReactModal__Content ReactModal__Content--after-open SignInFormModal"
-              onClick={[Function]}
-              onKeyDown={[Function]}
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
+            <ModalPortal
+              ariaHideApp={false}
+              bodyOpenClassName="ReactModal__Body--open"
+              className="SignInFormModal"
+              closeTimeoutMS={0}
+              contentLabel="SignIn Form"
+              defaultStyles={
+                Object {
+                  "content": Object {
+                    "WebkitOverflowScrolling": "touch",
+                    "background": "#fff",
+                    "border": "1px solid #ccc",
+                    "borderRadius": "4px",
+                    "bottom": "40px",
+                    "left": "40px",
+                    "outline": "none",
+                    "overflow": "auto",
+                    "padding": "20px",
+                    "position": "absolute",
+                    "right": "40px",
+                    "top": "40px",
+                  },
+                  "overlay": Object {
+                    "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "fixed",
+                    "right": 0,
+                    "top": 0,
+                  },
+                }
+              }
+              isOpen={true}
+              overlayClassName="SignInFormOverlay"
+              parentSelector={[Function]}
+              portalClassName="ReactModalPortal"
               role="dialog"
-              style={Object {}}
-              tabIndex="-1"
+              shouldCloseOnEsc={true}
+              shouldCloseOnOverlayClick={true}
+              shouldFocusAfterRender={true}
+              shouldReturnFocusAfterClose={true}
+              style={
+                Object {
+                  "content": Object {},
+                  "overlay": Object {
+                    "backgroundColor": "rgba(0, 0, 0, 0.85)",
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "fixed",
+                    "right": 0,
+                    "top": 0,
+                  },
+                }
+              }
             >
-              <form
-                className="sign-in-form"
+              <div
+                className="ReactModal__Overlay ReactModal__Overlay--after-open SignInFormOverlay"
+                onClick={[Function]}
+                onMouseDown={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "rgba(0, 0, 0, 0.85)",
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "fixed",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
               >
-                <h2
-                  className="login-header"
+                <div
+                  aria-label="SignIn Form"
+                  className="ReactModal__Content ReactModal__Content--after-open SignInFormModal"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  role="dialog"
+                  style={Object {}}
+                  tabIndex="-1"
                 >
-                  IntrepED Sign In
-                </h2>
-                <label
-                  className="username-label"
-                  htmlFor="username"
-                >
-                  Username:
-                </label>
-                <input
-                  className="username-input"
-                  name="username"
-                  onChange={[Function]}
-                  type="text"
-                  value=""
-                />
-                <label
-                  className="password-label"
-                  htmlFor="password"
-                >
-                  Password:
-                </label>
-                <input
-                  className="password-input"
-                  name="password"
-                  onChange={[Function]}
-                  type="password"
-                  value=""
-                />
-                <section
-                  className="buttons"
-                >
-                  <button
-                    className="login-btn"
-                    onClick={[Function]}
+                  <form
+                    className="sign-in-form"
                   >
-                    Login
-                  </button>
-                  <button
-                    className="cancel-btn"
-                    onClick={[Function]}
-                  >
-                    Cancel
-                  </button>
-                </section>
-              </form>
-            </div>
-          </div>
-        </ModalPortal>
-      </Portal>
-    </Modal>
-  </SignInModal>
-</Provider>
+                    <h2
+                      className="login-header"
+                    >
+                      IntrepED Sign In
+                    </h2>
+                    <label
+                      className="username-label"
+                      htmlFor="username"
+                    >
+                      Username:
+                    </label>
+                    <input
+                      className="username-input"
+                      name="username"
+                      onChange={[Function]}
+                      type="text"
+                      value=""
+                    />
+                    <label
+                      className="password-label"
+                      htmlFor="password"
+                    >
+                      Password:
+                    </label>
+                    <input
+                      className="password-input"
+                      name="password"
+                      onChange={[Function]}
+                      type="password"
+                      value=""
+                    />
+                    <section
+                      className="buttons"
+                    >
+                      <button
+                        className="login-btn"
+                        onClick={[Function]}
+                      >
+                        Login
+                      </button>
+                      <button
+                        className="cancel-btn"
+                        onClick={[Function]}
+                      >
+                        Cancel
+                      </button>
+                    </section>
+                  </form>
+                </div>
+              </div>
+            </ModalPortal>
+          </Portal>
+        </Modal>
+      </SignInModal>
+    </Provider>
+  </Router>
+</BrowserRouter>
 `;
