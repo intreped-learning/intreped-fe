@@ -3,7 +3,7 @@ import './CourseDetail.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import YouTube from 'react-youtube';
 import { completeCourse, teacherSignIn } from '../../utils/apiCalls';
-import CourseCompleteModal from '../CourseCompletedModal/CourseCompletedModal';
+import CourseCompletedModal from '../CourseCompletedModal/CourseCompletedModal';
 
 const CourseDetail = ({ id }) => {
   const dispatch = useDispatch();
@@ -64,7 +64,7 @@ const CourseDetail = ({ id }) => {
           <h3 className="title">{currentCourse.title}</h3>
           <p className="description">{currentCourse.description}</p>
       </div>
-      <CourseCompleteModal
+      <CourseCompletedModal
         modalState={modalState}
         toggleModal={toggleModal}
         category={currentCourse.category.split(' ')[0]} />
