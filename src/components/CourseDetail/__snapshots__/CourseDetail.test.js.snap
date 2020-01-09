@@ -65,7 +65,6 @@ exports[`CourseDetail should match snapshot 1`] = `
                 "width": "640",
               }
             }
-            videoId="B-hTXzUTxf8"
           >
             <div
               className=""
@@ -81,14 +80,119 @@ exports[`CourseDetail should match snapshot 1`] = `
           >
             <h3
               className="category"
-            />
+            >
+              Engagement Strategies
+            </h3>
             <h3
               className="title"
-            />
+            >
+              Improve Your Audience Connection
+            </h3>
             <p
               className="description"
-            />
+            >
+              How to engage your target audience
+            </p>
           </div>
+          <CourseCompletedModal
+            category="Engagement"
+            modalState={false}
+            toggleModal={[Function]}
+          >
+            <Modal
+              ariaHideApp={false}
+              bodyOpenClassName="ReactModal__Body--open"
+              className="CourseCompletedFormModal"
+              closeTimeoutMS={0}
+              contentLabel="CourseCompleted Form"
+              isOpen={false}
+              overlayClassName="CourseCompletedFormOverlay"
+              parentSelector={[Function]}
+              portalClassName="ReactModalPortal"
+              role="dialog"
+              shouldCloseOnEsc={true}
+              shouldCloseOnOverlayClick={true}
+              shouldFocusAfterRender={true}
+              shouldReturnFocusAfterClose={true}
+              style={
+                Object {
+                  "content": Object {},
+                  "overlay": Object {
+                    "backgroundColor": "rgba(0, 0, 0, 0.85)",
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "fixed",
+                    "right": 0,
+                    "top": 0,
+                  },
+                }
+              }
+            >
+              <Portal
+                containerInfo={
+                  <div
+                    class="ReactModalPortal"
+                  />
+                }
+              >
+                <ModalPortal
+                  ariaHideApp={false}
+                  bodyOpenClassName="ReactModal__Body--open"
+                  className="CourseCompletedFormModal"
+                  closeTimeoutMS={0}
+                  contentLabel="CourseCompleted Form"
+                  defaultStyles={
+                    Object {
+                      "content": Object {
+                        "WebkitOverflowScrolling": "touch",
+                        "background": "#fff",
+                        "border": "1px solid #ccc",
+                        "borderRadius": "4px",
+                        "bottom": "40px",
+                        "left": "40px",
+                        "outline": "none",
+                        "overflow": "auto",
+                        "padding": "20px",
+                        "position": "absolute",
+                        "right": "40px",
+                        "top": "40px",
+                      },
+                      "overlay": Object {
+                        "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "fixed",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    }
+                  }
+                  isOpen={false}
+                  overlayClassName="CourseCompletedFormOverlay"
+                  parentSelector={[Function]}
+                  portalClassName="ReactModalPortal"
+                  role="dialog"
+                  shouldCloseOnEsc={true}
+                  shouldCloseOnOverlayClick={true}
+                  shouldFocusAfterRender={true}
+                  shouldReturnFocusAfterClose={true}
+                  style={
+                    Object {
+                      "content": Object {},
+                      "overlay": Object {
+                        "backgroundColor": "rgba(0, 0, 0, 0.85)",
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "fixed",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    }
+                  }
+                />
+              </Portal>
+            </Modal>
+          </CourseCompletedModal>
         </div>
       </CourseDetail>
     </Provider>
