@@ -23,7 +23,7 @@ const CourseDetail = ({ id }) => {
 
   const sendCompletion = async () => {
     const teacherCourse = teacher.teacher_courses.find(course => course.course_id === parseInt(id));
-    const updatedCourse = await completeCourse(teacherCourse.id, currentCourse.duration);
+    await completeCourse(teacherCourse.id, currentCourse.duration);
     const teacherCourseRes = await teacherSignIn(teacher.username, teacher.password)
     dispatch({
       type: 'LOGIN',
@@ -57,7 +57,7 @@ const CourseDetail = ({ id }) => {
       <YouTube
         videoId={videoId}
         opts={opts}
-        onEnd={sendCompletion}
+        onEnd={teacher.id && sendCompletion}
       />
       <div className="course-info">
           <h3 className="category">{currentCourse.category}</h3>

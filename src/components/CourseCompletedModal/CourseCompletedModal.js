@@ -11,7 +11,7 @@ import './CourseCompletedModal.scss';
 
 const CourseCompletedModal = ({modalState, toggleModal, category}) => {
   const dispatch = useDispatch();
-  const { badgeProgress } = useSelector(state => state);
+  const { badgeProgress, teacher } = useSelector(state => state);
 
   const determineBadgeIcon = () => {
     if (category === 'Engagement') {
