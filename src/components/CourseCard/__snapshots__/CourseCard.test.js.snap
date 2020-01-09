@@ -57,6 +57,11 @@ exports[`CourseCard should match snapshot 1`] = `
                 <div
                   className="course-info"
                 >
+                  <img
+                    alt="badge"
+                    className="badge-icon"
+                    width="50px"
+                  />
                   <h3
                     className="category"
                   />
@@ -70,11 +75,14 @@ exports[`CourseCard should match snapshot 1`] = `
                     className="card-buttons"
                   >
                     <button
+                      className="add-to-list-btn"
                       onClick={[Function]}
                     >
                       Add To My List
                     </button>
-                    <button>
+                    <button
+                      className="begin-course-btn"
+                    >
                       Begin Course
                     </button>
                   </div>
