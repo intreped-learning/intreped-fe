@@ -81,9 +81,9 @@ export const addTeacherBadge = async (teacherId, badgeId, duration) => {
       'content-type': 'application/json'
     }
   }
-  const res = await fetch(`${baseUrl}teacher_badges`, options);
+  const res = await fetch(`${baseUrl}teacher_badges/`, options);
   if (!res.ok) {
-    throw Error('Failed to add badge')
+    return 'Failed to add badge'
   }
   const addedBadge = await res.json(); 
 }
