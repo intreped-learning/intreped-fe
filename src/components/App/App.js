@@ -45,9 +45,9 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <NavBar />
       <SignInModal />
       <main>
+      <Route exact path="/" render={() => <NavBar /> } />
       <Route exact path="/" render={() => <CardContainer /> } />
       <Route exact path="/dashboard" render={() => <Dashboard /> } />
       <Route exact path="/courses/:id" render={({ match }) => <CourseDetail id={match.params.id} /> } />

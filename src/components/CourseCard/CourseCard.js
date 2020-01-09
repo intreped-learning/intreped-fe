@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import './CourseCard.scss';
 import { Link } from 'react-router-dom';
 import { addToTeacherCourses } from '../../utils/apiCalls';
 
 const CourseCard = ({ id, category, title, description, thumbnail, badge }) => {
   const route = `courses/${id}`
+  const [error, setError] = useState('');
+  const [feedback, setFeedback] = useState('');
 
-  const addToMyList = (e) => {
+  const addToMyList = async (e) => {
     e.preventDefault();
-    addToTeacherCourses(id)
-      .then(teacherCourse => console.log(teacherCourse));
+    try {
+      const res = await addToTeacherCourses(id)
+      setFeedback('Success! Course Added!')
+    } catch (error) {
+        setError('Course is already in your lists!')
+    }
   }
 
   const categoryCheck = () => {
     if(category === "Culturally Responsive Teaching") {
-      console.log("moose")
       return "CLDE"
     } else {
       return category
@@ -34,6 +39,8 @@ const CourseCard = ({ id, category, title, description, thumbnail, badge }) => {
             <button className="add-to-list-btn" onClick={(e) => addToMyList(e)}>Add To My List</button>
             <button className="begin-course-btn">Begin Course</button>
           </div>
+          {error && <p>{error}</p>}
+          {feedback && <p>{feedback}</p>}
         </div>
       </div>
     </Link>
