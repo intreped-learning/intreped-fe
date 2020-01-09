@@ -38,7 +38,7 @@ describe('apiCalls', () => {
       let url = 'https://intreped-api.herokuapp.com/teacher_courses/';
       const body = {
         teacher_id: 1,
-        course_id: "1", 
+        course_id: 1, 
         current_time_marker: "0s",
         is_favorite: true,
         is_complete: false,
@@ -122,6 +122,7 @@ describe('apiCalls', () => {
       expect(results).toEqual([])
     })
   })
+  // need to test completeCourse
 })
 
 const mockCourses = [
