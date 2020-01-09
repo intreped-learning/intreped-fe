@@ -8,64 +8,54 @@ import CourseDetail from './CourseDetail';
 
 const mockStore = configureMockStore([thunk]);
 const store = mockStore({
-  teacher: {
-    username: '',
-    id: null,
-    teacher_courses: [
+  teacher:
       {
-        "model": "intreped.course",
-        "id": 1,
-        "fields": {
-          "title": "Kagan Cooperative Learning: Inside-Outside Circle & Talking Chips",
-          "description": "Kagan structures are techniques and activities teachers can use in their classrooms to keep students engaged, active, and have fun while they are learning",
-          "url": "https://www.youtube.com/watch?v=B-hTXzUTxf8",
-          "thumbnail": "https://i.ytimg.com/vi/hTXzUTxf8/mqdefault.jpg",
-          "category": "Engagement Strategies",
-          "duration": "11m30s"
-        }
+          "id": 1,
+          "name": "Jason Bourne",
+          "username": "top_assassin",
+          "email": "jbourne@email.com",
+          "password": "password",
+          "teacher_courses": [
+              {
+                  "id": 1,
+                  "teacher_id": 1,
+                  "course_id": 1,
+                  "current_time_marker": "3m6s",
+                  "is_favorite": true,
+                  "is_complete": false,
+                  "is_in_progress": true
+              }
+          ],
+          "teacher_badges": []
       },
-      {
-        "model": "intreped.course",
-        "id": 2,
-        "fields": {
-          "title": "Think Pair Share Explained",
-          "description": "This video provides a succinct explanation for students about how to participate in THINK PAIR SHARE activities.",
-          "url": "https://www.youtube.com/watch?v=wW87rihT38I",
-          "thumbnail": "https://i.ytimg.com/vi/wW87rihT38I/mqdefault.jpg",
-          "category": "Engagement Strategies",
-          "duration": "1m35s"
+      courses: [
+        {
+            "id": 1,
+            "title": "Improve Your Audience Connection",
+            "description": "How to engage your target audience",
+            "url": "something.com/slfsaldfhk",
+            "thumbnail": "something.com/salkdfhkjfh",
+            "category": "Engagement Strategies",
+            "duration": "14m5s"
+        },
+        {
+            "id": 2,
+            "title": "Example",
+            "description": "This is an example",
+            "url": "fakeurl.com",
+            "thumbnail": "fakeimage.jpg",
+            "category": "Different Category",
+            "duration": "4m47s"
         }
-      }
-    ]
-  },
-  courses: [
-    {
-      "model": "intreped.course",
-      "id": 1,
-      "fields": {
-        "title": "Kagan Cooperative Learning: Inside-Outside Circle & Talking Chips",
-        "description": "Kagan structures are techniques and activities teachers can use in their classrooms to keep students engaged, active, and have fun while they are learning",
-        "url": "https://www.youtube.com/watch?v=B-hTXzUTxf8",
-        "thumbnail": "https://i.ytimg.com/vi/hTXzUTxf8/mqdefault.jpg",
-        "category": "Engagement Strategies",
-        "duration": "11m30s"
-      }
-    },
-    {
-      "model": "intreped.course",
-      "id": 2,
-      "fields": {
-        "title": "Think Pair Share Explained",
-        "description": "This video provides a succinct explanation for students about how to participate in THINK PAIR SHARE activities.",
-        "url": "https://www.youtube.com/watch?v=wW87rihT38I",
-        "thumbnail": "https://i.ytimg.com/vi/wW87rihT38I/mqdefault.jpg",
-        "category": "Engagement Strategies",
-        "duration": "1m35s"
-      }
-    }
-  ],
-  modalOpen: true
-});
+    ],
+    badgeProgress: {
+      Engagement: [1, 6, 8],
+      Classroom: [2, 4],
+      Culturally: [9],
+      Effective: [11, 13],
+      Data: [5]
+    }    
+})
 const getWrapper = () => mount(
   <Router>
     <Provider store={store}>
