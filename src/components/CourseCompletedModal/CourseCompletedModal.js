@@ -1,11 +1,31 @@
 import ReactModal from 'react-modal';
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import Classroom from '../../images/classroom-management-center.png';
+import Culturally from '../../images/culturally-responsive-teaching.png';
+import Data from '../../images/data-driven-ddi-badge.png';
+import Engagement from '../../images/engagement-strategies-es.png';
+import Effective from '../../images/lesson-planning.png';
 import './CourseCompletedModal.scss';
 
 
-const CourseCompletedModal = ({modalState, toggleModal}) => {
+const CourseCompletedModal = ({modalState, toggleModal, category}) => {
   const dispatch = useDispatch();
+  const { badgeProgress } = useSelector(state => state);
+
+  const determineBadgeIcon = () => {
+    if (category === 'Engagement') {
+      return Engagement
+    } else if (category === 'Classroom') {
+      return Classroom
+    } else if (category === 'Culturally') {
+      return Culturally
+    } else if (category === 'Data') {
+      return Data
+    } else {
+      return Effective
+    }
+  }
 
   return (
     <ReactModal
@@ -28,6 +48,8 @@ const CourseCompletedModal = ({modalState, toggleModal}) => {
     >
       <section className='course-complete-summary'>
         <h1>Congratulations!</h1>
+        <p>You have completed {badgeProgress[category].length}/5 courses required for your next badge!</p>
+        <img src={determineBadgeIcon()} alt={category}/>
         <button
           className='acknowlege-summary'
           onClick={toggleModal}

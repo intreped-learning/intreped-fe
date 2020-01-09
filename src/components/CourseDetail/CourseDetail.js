@@ -8,21 +8,21 @@ import CourseCompleteModal from '../CourseCompletedModal/CourseCompletedModal';
 const CourseDetail = ({ id }) => {
   const dispatch = useDispatch();
   const [modalState, setModalState] = useState(false);
-  const { courses, teacher } = useSelector(state => state);
+  const { courses, teacher, badgeProgress } = useSelector(state => state);
   const currentCourse = courses.find(course => course.id === parseInt(id));
-  const teacherCourse = teacher.teacher_courses.find(course => course.course_id === parseInt(id));
   const videoId = currentCourse.url.split('?v=')[1];
   const opts = {
     height: '390',
     width: '640',
     playerVars: { // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
-      controls: 0,
+      // controls: 0,
       disablekb: 1,
     }
   };
 
   const sendCompletion = async () => {
+    const teacherCourse = teacher.teacher_courses.find(course => course.course_id === parseInt(id));
     const updatedCourse = await completeCourse(teacherCourse.id, currentCourse.duration);
     const teacherCourseRes = await teacherSignIn(teacher.username, teacher.password)
     dispatch({
@@ -30,12 +30,23 @@ const CourseDetail = ({ id }) => {
       payload: teacherCourseRes[0]
     })
     updateBadges()
+  }
+
+  const updateBadges = async () => {
+    const shortHandCategory = currentCourse.category.split(' ')[0]
+    const updatedBadges = {
+      ...badgeProgress,
+      [shortHandCategory]:[...badgeProgress[shortHandCategory], currentCourse.id]
+    };
+    if (!badgeProgress[shortHandCategory].includes(currentCourse.id)) {
+      dispatch({
+        type: 'FINISH_COURSE',
+        payload: updatedBadges
+      })
+    }
     toggleModal();
   }
 
-  const updateBadges = () => {
-    
-  }
 
   const toggleModal = () => {
     setModalState(!modalState);
@@ -53,7 +64,10 @@ const CourseDetail = ({ id }) => {
           <h3 className="title">{currentCourse.title}</h3>
           <p className="description">{currentCourse.description}</p>
       </div>
-      <CourseCompleteModal modalState={modalState} toggleModal={toggleModal}/>
+      <CourseCompleteModal
+        modalState={modalState}
+        toggleModal={toggleModal}
+        category={currentCourse.category.split(' ')[0]} />
     </div>
   );
 };

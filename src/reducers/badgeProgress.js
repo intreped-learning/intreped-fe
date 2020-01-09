@@ -7,7 +7,8 @@ export const badgeProgress = (state = {
 }, action) => {
   switch (action.type) {
     case 'FINISH_COURSE':
-      return action.payload;
+      console.log(action.payload)
+      return action.payload
     default:
       return state;
   }
