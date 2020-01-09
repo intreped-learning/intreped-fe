@@ -9,7 +9,7 @@ const CourseDetail = ({ id }) => {
   const { courses, teacher } = useSelector(state => state);
   const currentCourse = courses.find(course => course.id === parseInt(id));
   const teacherCourse = teacher.teacher_courses.find(course => course.course_id === parseInt(id));
-  const videoId = currentCourse.url.split('?v=')[1];
+  const videoId = currentCourse.fields.url.split('?v=')[1];
   const opts = {
     height: '390',
     width: '640',
