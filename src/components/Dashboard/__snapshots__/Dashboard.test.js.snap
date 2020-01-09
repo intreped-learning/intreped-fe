@@ -63,11 +63,34 @@ exports[`Dashboard should match snapshot 1`] = `
           <section
             className="watch-list"
           >
-            <h2
-              className="blank-field-msg"
+            <Link
+              to="courses/1"
             >
-              Add Some Courses To Your Watch List!
-            </h2>
+              <LinkAnchor
+                href="/courses/1"
+                navigate={[Function]}
+              >
+                <a
+                  href="/courses/1"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="dashboard-course"
+                  >
+                    <h5
+                      className="course-title"
+                    >
+                      Improve Your Audience Connection
+                    </h5>
+                    <img
+                      alt="Improve Your Audience Connection"
+                      className="course-thumbnail"
+                      src="something.com/salkdfhkjfh"
+                    />
+                  </div>
+                </a>
+              </LinkAnchor>
+            </Link>
           </section>
           <h2>
             Badges
@@ -80,6 +103,7 @@ exports[`Dashboard should match snapshot 1`] = `
             >
               Complete Some Courses To Start Earning Badges!
             </h2>
+            0
           </section>
         </main>
       </Dashboard>
