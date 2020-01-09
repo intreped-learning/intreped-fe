@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match snapshot 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [MockFunction],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+    >
+      <Header
+        onClick={[MockFunction]}
+      >
+        <header>
+          <Link
+            className="logo"
+            id="logo"
+            to="/"
+          >
+            <LinkAnchor
+              className="logo"
+              href="/"
+              id="logo"
+              navigate={[Function]}
+            >
+              <a
+                className="logo"
+                href="/"
+                id="logo"
+                onClick={[Function]}
+              >
+                <h1>
+                  INTREP
+                  <span
+                    className="ed"
+                  >
+                    ED
+                  </span>
+                </h1>
+              </a>
+            </LinkAnchor>
+          </Link>
+          <div>
+            <button
+              className="sign-in-btn"
+              onClick={[Function]}
+            >
+               Sign In 
+            </button>
+            <button
+              className="sign-up-btn"
+            >
+               Sign Up 
+            </button>
+          </div>
+        </header>
+      </Header>
+    </Provider>
+  </Router>
+</BrowserRouter>
+`;

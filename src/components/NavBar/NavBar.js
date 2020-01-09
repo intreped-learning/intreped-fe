@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './NavBar.scss';
 import { useDispatch, useSelector } from 'react-redux';
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   const { currentCategory } = useSelector(state => state);
-  const toggle = () => setIsOpen(!isOpen);
 
   const handleChangeDropDown = (e) => {
     dispatch({

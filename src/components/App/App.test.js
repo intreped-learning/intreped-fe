@@ -1,15 +1,34 @@
-// import React from 'react';
-// import { render } from '@testing-library/react';
-// import App from './App';
+import React from 'react';
+import { mount } from 'enzyme';
+import { Provider } from 'react-redux';
+import configureMockStore from 'redux-mock-store'
+import thunk from 'redux-thunk';
+import { BrowserRouter as Router} from 'react-router-dom';
+import App from './App';
 
-// test('renders learn react link', () => {
-//   const { getByText } = render(<App />);
-//   const linkElement = getByText(/learn react/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
+const mockStore = configureMockStore([thunk]);
+const store = mockStore({
+  teacher: {
+    username: '',
+    id: null
+  },
+  courses: [],
+  modalOpen: true
+});
+const getCourses = jest.fn();
+const useEffect = jest.fn().mockImplementation(() => getCourses())
+const getWrapper = () => mount(
+  <Router>
+    <Provider store={store}>
+      <App useEffect={useEffect}/>
+    </Provider>
+  </Router>
+);
+const wrapper = getWrapper();
 
-describe("magikApp", () => {
-  it('should pass a test', () => {
-    expect(true).toEqual(true);
-  })
-})
+describe('App', () => {
+  it('should match snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+

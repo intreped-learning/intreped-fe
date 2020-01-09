@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CourseDetail should match snapshot 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+    >
+      <CourseDetail
+        id={1}
+      >
+        <div
+          className="course-detail"
+        >
+          <YouTube
+            className={null}
+            containerClassName=""
+            id={null}
+            onEnd={[Function]}
+            onError={[Function]}
+            onPause={[Function]}
+            onPlay={[Function]}
+            onPlaybackQualityChange={[Function]}
+            onPlaybackRateChange={[Function]}
+            onReady={[Function]}
+            onStateChange={[Function]}
+            opts={
+              Object {
+                "height": "390",
+                "playerVars": Object {
+                  "autoplay": 1,
+                  "controls": 0,
+                  "disablekb": 1,
+                },
+                "width": "640",
+              }
+            }
+            videoId="B-hTXzUTxf8"
+          >
+            <div
+              className=""
+            >
+              <div
+                className={null}
+                id={null}
+              />
+            </div>
+          </YouTube>
+          <div
+            className="course-info"
+          >
+            <h3
+              className="category"
+            />
+            <h3
+              className="title"
+            />
+            <p
+              className="description"
+            />
+          </div>
+        </div>
+      </CourseDetail>
+    </Provider>
+  </Router>
+</BrowserRouter>
+`;

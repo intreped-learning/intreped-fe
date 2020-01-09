@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar should match snapshot 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+    >
+      <NavBar>
+        <nav
+          className="nav-bar"
+        >
+          <form
+            className="search-options"
+          >
+            <select
+              id="category-select"
+              onChange={[Function]}
+            >
+              <option
+                value="All Categories"
+              >
+                All Categories
+              </option>
+              <option
+                value="Engagement Strategies"
+              >
+                Engagement Strategies
+              </option>
+              <option
+                value="Classroom Management"
+              >
+                Classroom Management
+              </option>
+              <option
+                value="Effective Lesson Planning"
+              >
+                Lesson Planning
+              </option>
+              <option
+                value="Culturally Responsive Teaching"
+              >
+                Culturally Responsive Teaching
+              </option>
+              <option
+                value="Data-Driven Instruction"
+              >
+                Data-Driven Instruction
+              </option>
+            </select>
+            <input
+              onChange={[Function]}
+              placeholder="Search courses"
+              type="text"
+            />
+          </form>
+        </nav>
+      </NavBar>
+    </Provider>
+  </Router>
+</BrowserRouter>
+`;
