@@ -36,9 +36,7 @@ describe('courses reducer', () => {
     const action = {
       type: 'LOGOUT',
     }
-    const expected = {
-      teacher: {}
-    };
+    const expected = {};
 
     const result = teacher(initialState, action)
 
