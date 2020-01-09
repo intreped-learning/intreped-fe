@@ -12,7 +12,7 @@ const store = mockStore({
     username: '',
     id: null
   },
-  courses: {},
+  courses: [],
   modalOpen: true
 });
 

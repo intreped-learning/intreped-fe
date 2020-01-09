@@ -8,7 +8,10 @@ import App from './App';
 
 const mockStore = configureMockStore([thunk]);
 const store = mockStore({
-  teacher: 'Mr. Feeny',
+  teacher: {
+    username: '',
+    id: null
+  },
   courses: [],
   modalOpen: true
 });
