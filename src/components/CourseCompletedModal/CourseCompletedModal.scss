@@ -1,0 +1,28 @@
+.course-complete-summary {
+  align-items: center;
+  background: #ffffff;
+  border: 5px solid #453B7F;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
+  justify-content: space-evenly;
+  left: 25vw;
+  position: absolute;
+  top: 20vh;
+  width: 65vw;
+
+  h1 {
+    color: #000000;
+    width: 50%;
+  }
+
+  img {
+    height: 25vh;
+  }
+
+  button {
+    border-radius: 5px;
+    width: 30%;
+  }
+}
