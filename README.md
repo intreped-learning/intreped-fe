@@ -9,91 +9,56 @@ Visit IntrepEd [here](http://intreped-fe.herokuapp.com/).
 ## Primary Features
 - IntrepEd provides high-quality, practical content in short, 10-15 minute courses that is easy for teachers to implement on a daily basis.
 
-![IntrepEd](https://user-images.githubusercontent.com/48742436/71945912-5d109280-3185-11ea-9f61-c2f5d7df2543.png)
+![IntrepEd](https://user-images.githubusercontent.com/47537744/72036031-db893500-3256-11ea-81cf-1dbcb7f1845a.png)
 
-- IntrepEd is gamified to be fun, while maintaining professionalism. The more courses a teacher takes in a particular topic, the more points they earn for that topic. Teachers earn badges and become verified experts in particular skills. 
+- IntrepEd is gamified to be fun, while maintaining professionalism. When a teacher is signed in, the more courses a teacher takes in a particular topic, the more points they earn for that topic. Teachers earn badges and become verified experts in particular skills. 
 
-- Dashboard image here
+![Dashboard](https://user-images.githubusercontent.com/47537744/72037389-3a50ad80-325b-11ea-98ec-c7b1abdb38e3.png)
+
+![Dashboard](https://user-images.githubusercontent.com/47537744/72036423-04f69080-3258-11ea-9d7b-b44ddefcfba8.png)
 
 ## Primary Tech Stack
-- Help 
+1. React
+2. React Hooks
+3. Redux 
+4. Enzyme
+5. Jest
 
 ## Contributors
 - [Lacy Rudd](https://github.com/dawnlunacy)
 - [Eric Meldrum](https://github.com/ericwm76)
 - [Chris Basham](https://github.com/chrisdbasham317)
 
+## Project Work Board
+- [Github Project Board](https://github.com/orgs/intreped-learning/projects/1)
+
 ## Local Setup
 
-1. Help
+Clone repo.
+```
+git clone https://github.com/intreped-learning/intreped-fe
+```
+Install dependencies.
+```
+npm install
+```
+Run browser.
+```
+npm start
+```
 
-## About Create React Apps
+####  Progressive Web App
+ While this project is not optimized yet for full offline capabilities, the baseline set up for a PWA is implemented. 
+ ![Browser PWA Audit](https://user-images.githubusercontent.com/47537744/72036805-3cb20800-3259-11ea-8165-3f2696ecef91.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### WireFrame 
+This wireframe was made using Invision Studio
+![WireFrame](https://user-images.githubusercontent.com/47537744/72037068-150f6f80-325a-11ea-94ba-d6fe47effcbd.png)
 
-### Available Scripts
-
-In the project directory, you can run:
-
-- `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-- `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-- `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-- `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-### Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-#### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-#### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-#### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-#### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-#### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-#### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### Custom Badges
+To enhance the user experience, custom badges for IntrepEd were made using Adobe Illustrator.
+![Classroom Management](https://user-images.githubusercontent.com/47537744/72037195-7df6e780-325a-11ea-862a-0cb271d35407.png)
+![Culturally Responsive Teaching](https://user-images.githubusercontent.com/47537744/72037240-a8e13b80-325a-11ea-8ead-dc04649d0c48.png)
+![Data Driven Instruction](https://user-images.githubusercontent.com/47537744/72037298-e0e87e80-325a-11ea-8705-74c23bc436da.png)
+![Engagement Strategies](https://user-images.githubusercontent.com/47537744/72037336-fa89c600-325a-11ea-9e4f-d0a14c5f8b2f.png)
+![Lesson Planning](https://user-images.githubusercontent.com/47537744/72037356-0f665980-325b-11ea-8f2c-bcc540f7538f.png)
