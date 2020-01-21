@@ -57,8 +57,13 @@ This wireframe was made using Invision Studio
 
 #### Custom Badges
 To enhance the user experience, custom badges for IntrepEd were made using Adobe Illustrator.
-![Classroom Management](https://user-images.githubusercontent.com/47537744/72037195-7df6e780-325a-11ea-862a-0cb271d35407.png)
-![Culturally Responsive Teaching](https://user-images.githubusercontent.com/47537744/72037240-a8e13b80-325a-11ea-8ead-dc04649d0c48.png)
-![Data Driven Instruction](https://user-images.githubusercontent.com/47537744/72037298-e0e87e80-325a-11ea-8705-74c23bc436da.png)
-![Engagement Strategies](https://user-images.githubusercontent.com/47537744/72037336-fa89c600-325a-11ea-9e4f-d0a14c5f8b2f.png)
-![Lesson Planning](https://user-images.githubusercontent.com/47537744/72037356-0f665980-325b-11ea-8f2c-bcc540f7538f.png)
+
+<img src="https://user-images.githubusercontent.com/47537744/72037195-7df6e780-325a-11ea-862a-0cb271d35407.png" width="200" height="200" alt="Classroom Management Badge, CM for short."/>
+<br>
+<img src="https://user-images.githubusercontent.com/47537744/72037240-a8e13b80-325a-11ea-8ead-dc04649d0c48.png" width="200" height="200" alt="Culturally Responsive Teaching badge, CLDE for short"/>
+<br>
+<img src="https://user-images.githubusercontent.com/47537744/72037298-e0e87e80-325a-11ea-8705-74c23bc436da.png" width="250" height="200" alt="Data Driven Instruction badge, DDI for short."/>
+<br>
+<img src="https://user-images.githubusercontent.com/47537744/72037336-fa89c600-325a-11ea-9e4f-d0a14c5f8b2f.png" width="200" height="200" alt="Engagement Strategies Badge, ES for short."/>
+<br>
+<img src="https://user-images.githubusercontent.com/47537744/72037356-0f665980-325b-11ea-8f2c-bcc540f7538f.png" width="250" height="200" alt="Lesson Planning badge, LP for short."/>
