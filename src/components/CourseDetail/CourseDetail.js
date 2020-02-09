@@ -33,7 +33,7 @@ const CourseDetail = ({ id }) => {
   }
 
   const updateBadges = async () => {
-    const shortHandCategory = currentCourse.category.split(' ')[0]
+    const shortHandCategory = currentCourse.category.split(' ')[0];
     const updatedBadges = {
       ...badgeProgress,
       [shortHandCategory]:[...badgeProgress[shortHandCategory], currentCourse.id]

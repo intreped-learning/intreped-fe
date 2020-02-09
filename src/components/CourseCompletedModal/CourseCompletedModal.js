@@ -20,11 +20,23 @@ const CourseCompletedModal = ({modalState, toggleModal, category}) => {
       return Classroom
     } else if (category === 'Culturally') {
       return Culturally
-    } else if (category === 'Data') {
+    } else if (category === 'Data-Driven') {
       return Data
     } else {
       return Effective
     }
+  }
+
+  const determineBadgeProgress = () => {
+    if(category === "Data-Driven") {
+      category = "Data"
+    }
+    if (badgeProgress[category].length === []) {
+      return 0;
+    } else {
+      return badgeProgress[category].length;
+    }
+
   }
 
   return (
@@ -48,7 +60,7 @@ const CourseCompletedModal = ({modalState, toggleModal, category}) => {
     >
       <section className='course-complete-summary'>
         <h1>Congratulations!</h1>
-        <p>You have completed {badgeProgress[category].length}/5 courses required for your next badge!</p>
+        <p>You have completed {determineBadgeProgress()}/5 courses required for your next badge!</p>
         <img src={determineBadgeIcon()} alt={category}/>
         <button
           className='acknowlege-summary'
